@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PixelWire — Radar de Notícias de Jogos</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
+
+  :root{
+    --bg: #0A0C12;
+    --bg-panel: #12151E;
+    --bg-card: #161A25;
+    --border: #23283A;
+    --text: #E8EAF0;
+    --text-dim: #8890A6;
+    --accent-violet: #8B5CF6;
+    --accent-cyan: #22D3EE;
+    --accent-amber: #F5A524;
+    --font-display: 'Space Grotesk', sans-serif;
+    --font-body: 'Inter', sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+  }
+
+  *{ box-sizing: border-box; margin:0; padding:0; }
+  html{ scroll-behavior: smooth; }
+  body{
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--font-body);
+    min-height: 100vh;
+    padding-bottom: 60px;
+  }
+
+  a{ color: inherit; text-decoration: none; }
+
+  header{
+    border-bottom: 1px solid var(--border);
+    padding: 22px 32px;
+    display:flex; align-items:center; justify-content:space-between;
+    flex-wrap: wrap;
+    gap: 14px;
+  }
+  .logo{
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 22px;
+    letter-spacing: -0.02em;
+    display:flex; align-items:center; gap:10px;
+  }
+  .logo-dot{
+    width:10px; height:10px; border-radius:50%;
+    background: var(--accent-violet);
+    box-shadow: 0 0 12px var(--accent-violet);
+  }
+  .status{
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--text-dim);
+    display:flex; align-items:center; gap:8px;
+  }
+  .status .pulse{
+    width:7px;height:7px;border-radius:50%;
+    background: #34D399;
+    animation: pulse 1.6s ease-in-out infinite;
+  }
+  @keyframes pulse{
+    0%,100%{ opacity:1; box-shadow:0 0 0 0 rgba(52,211,153,.5);}
+    50%{ opacity:.6; box-shadow:0 0 0 5px rgba(52,211,153,0);}
+  }
+
+  .ticker-wrap{
+    border-bottom: 1px solid var(--border);
+    background: var(--bg-panel);
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 10px 0;
+  }
+  .ticker{
+    display: inline-block;
+    font-family: var(--font-mono);
+    font-size: 13px;
+    color: var(--accent-cyan);
+    animation: scroll-left 32s linear infinite;
+  }
+  .ticker span{ margin-right: 48px; color: var(--text-dim); }
+  .ticker span b{ color: var(--accent-cyan); font-weight: 500; }
+  @keyframes scroll-left{
+    0%{ transform: translateX(0); }
+    100%{ transform: translateX(-50%); }
+  }
+
+  .filters{
+    display:flex; gap:8px; flex-wrap:wrap;
+    padding: 24px 32px 4px;
+  }
+  .chip{
+    font-family: var(--font-mono);
+    font-size: 12.5px;
+    padding: 7px 14px;
+    border-radius: 20px;
+    border: 1px solid var(--border);
+    background: var(--bg-panel);
+    color: var(--text-dim);
+    cursor: pointer;
+    transition: all .15s ease;
+  }
+  .chip:hover{ border-color: var(--accent-violet); color: var(--text); }
+  .chip.active{
+    background: var(--accent-violet);
+    border-color: var(--accent-violet);
+    color: #fff;
+  }
+
+  .grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 18px;
+    padding: 20px 32px 40px;
+  }
+
+  .card{
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 20px;
+    display:flex; flex-direction:column; gap: 12px;
+    transition: transform .18s ease, border-color .18s ease;
+    position: relative;
+  }
+  .card:hover{
+    transform: translateY(-3px);
+    border-color: #34395199;
+  }
+
+  .card-top{
+    display:flex; justify-content:space-between; align-items:center;
+  }
+  .tag{
+    font-family: var(--font-mono);
+    font-size: 10.5px;
+    text-transform: uppercase;
+    letter-spacing: .06em;
+    padding: 3px 9px;
+    border-radius: 5px;
+  }
+  .tag.fps{ background:#8B5CF61A; color: var(--accent-violet); }
+  .tag.rpg{ background:#22D3EE1A; color: var(--accent-cyan); }
+  .tag.indie{ background:#F5A5241A; color: var(--accent-amber); }
+  .tag.plataforma{ background:#EC48991A; color: #EC4899; }
+
+  .card-time{
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: var(--text-dim);
+  }
+
+  .card h3{
+    font-family: var(--font-display);
+    font-size: 18px;
+    line-height: 1.3;
+    font-weight: 700;
+  }
+
+  .card p{
+    font-size: 13.5px;
+    line-height: 1.55;
+    color: #B4B9CC;
+  }
+
+  .card-footer{
+    margin-top: auto;
+    padding-top: 12px;
+    border-top: 1px dashed var(--border);
+    display:flex; justify-content:space-between; align-items:center;
+  }
+  .source{
+    font-size: 12px;
+    color: var(--text-dim);
+    display:flex; align-items:center; gap:6px;
+  }
+  .source-dot{
+    width:6px;height:6px;border-radius:50%;
+    background: var(--accent-cyan);
+  }
+  .ai-badge{
+    font-family: var(--font-mono);
+    font-size: 10px;
+    color: var(--text-dim);
+    border: 1px solid var(--border);
+    padding: 2px 7px;
+    border-radius: 4px;
+  }
+
+  footer{
+    text-align:center;
+    padding: 30px;
+    color: var(--text-dim);
+    font-size: 12px;
+    font-family: var(--font-mono);
+  }
+
+  @media (max-width: 640px){
+    header, .filters, .grid{ padding-left: 18px; padding-right: 18px; }
+  }
+</style>
+</head>
+<body>
+
+  <header>
+    <div class="logo"><span class="logo-dot"></span>PixelWire</div>
+    <div class="status"><span class="pulse"></span>painel atualizado automaticamente · 24 jul 2026</div>
+  </header>
+
+  <div class="ticker-wrap">
+    <div class="ticker">
+      <span><b>ÚLTIMA HORA —</b> Estúdio indie anuncia sequência surpresa após 6 anos de silêncio</span>
+      <span><b>RUMOR —</b> Novo trailer de RPG de mundo aberto pode vazar nesta semana</span>
+      <span><b>ATUALIZAÇÃO —</b> Patch de balanceamento chega a shooter competitivo</span>
+      <span><b>LANÇAMENTO —</b> Jogo de plataforma ganha data oficial para o próximo trimestre</span>
+      <span><b>ÚLTIMA HORA —</b> Estúdio indie anuncia sequência surpresa após 6 anos de silêncio</span>
+      <span><b>RUMOR —</b> Novo trailer de RPG de mundo aberto pode vazar nesta semana</span>
+      <span><b>ATUALIZAÇÃO —</b> Patch de balanceamento chega a shooter competitivo</span>
+      <span><b>LANÇAMENTO —</b> Jogo de plataforma ganha data oficial para o próximo trimestre</span>
+    </div>
+  </div>
+
+  <div class="filters" id="filters">
+    <div class="chip active" data-f="todos">Todos</div>
+    <div class="chip" data-f="fps">FPS</div>
+    <div class="chip" data-f="rpg">RPG</div>
+    <div class="chip" data-f="indie">Indie</div>
+    <div class="chip" data-f="plataforma">Plataformas</div>
+  </div>
+
+  <div class="grid" id="grid"></div>
+
+  <footer>protótipo estático · dados fictícios apenas para visualização de layout</footer>
+
+<script>
+const noticias = [
+  {cat:"rpg", tempo:"há 12 min", titulo:"Estúdio confirma expansão para RPG de fantasia lançado em 2025",
+   resumo:"Segundo comunicado oficial, o novo conteúdo trará uma região inédita, novas classes de personagem e deve chegar ainda neste semestre.",
+   fonte:"Fonte: Portal GameHub"},
+  {cat:"fps", tempo:"há 34 min", titulo:"Atualização de equilíbrio chega a shooter competitivo mais jogado do momento",
+   resumo:"O patch reduz o dano de duas armas populares e ajusta tempo de recarga, mudança que já divide opiniões entre jogadores competitivos.",
+   fonte:"Fonte: Arena News"},
+  {cat:"indie", tempo:"há 1h", titulo:"Jogo indie de exploração surpreende e ultrapassa 100 mil cópias vendidas",
+   resumo:"Desenvolvido por uma equipe de apenas três pessoas, o título vem sendo elogiado pela trilha sonora e pelo estilo visual pintado à mão.",
+   fonte:"Fonte: IndieWatch"},
+  {cat:"plataforma", tempo:"há 2h", titulo:"Novo jogo de plataforma ganha data de lançamento oficial",
+   resumo:"A produtora revelou que o título chega ao mercado no próximo trimestre, com versões para consoles de última geração e PC.",
+   fonte:"Fonte: Console Times"},
+  {cat:"rpg", tempo:"há 3h", titulo:"Vazamento sugere remasterização de clássico RPG dos anos 2000",
+   resumo:"Imagens que circulam em fóruns apontam para uma possível remasterização, mas nem estúdio nem publicadora confirmaram o projeto até o momento.",
+   fonte:"Fonte: RetroPixel"},
+  {cat:"indie", tempo:"há 4h", titulo:"Jogo brasileiro de estratégia é selecionado para festival internacional",
+   resumo:"O título, ambientado no sertão nordestino, foi escolhido entre mais de 800 inscritos para a mostra competitiva do evento.",
+   fonte:"Fonte: BR Games Report"},
+  {cat:"fps", tempo:"há 5h", titulo:"Nova temporada traz mapa inédito para jogo de tiro em primeira pessoa",
+   resumo:"Além do novo cenário, a temporada introduz um modo de jogo limitado por tempo e itens cosméticos exclusivos.",
+   fonte:"Fonte: Arena News"},
+  {cat:"plataforma", tempo:"há 6h", titulo:"Coletânea reúne três jogos de plataforma clássicos em versão remasterizada",
+   resumo:"A compilação inclui melhorias gráficas, suporte a resolução 4K e trilha sonora remixada, mantendo a jogabilidade original intacta.",
+   fonte:"Fonte: Console Times"},
+];
+
+const grid = document.getElementById("grid");
+const filters = document.getElementById("filters");
+
+function render(filtro){
+  grid.innerHTML = "";
+  noticias
+    .filter(n => filtro === "todos" || n.cat === filtro)
+    .forEach(n => {
+      const card = document.createElement("div");
+      card.className = "card";
+      card.innerHTML = `
+        <div class="card-top">
+          <span class="tag ${n.cat}">${n.cat}</span>
+          <span class="card-time">${n.tempo}</span>
+        </div>
+        <h3>${n.titulo}</h3>
+        <p>${n.resumo}</p>
+        <div class="card-footer">
+          <span class="source"><span class="source-dot"></span>${n.fonte}</span>
+          <span class="ai-badge">reescrito por IA</span>
+        </div>
+      `;
+      grid.appendChild(card);
+    });
+}
+
+filters.addEventListener("click", (e) => {
+  const chip = e.target.closest(".chip");
+  if(!chip) return;
+  document.querySelectorAll(".chip").forEach(c => c.classList.remove("active"));
+  chip.classList.add("active");
+  render(chip.dataset.f);
+});
+
+render("todos");
+</script>
+
+</body>
+</html>
