@@ -4,304 +4,855 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>PixelWire — Radar de Notícias de Jogos</title>
-<link rel="icon" href="favicon.ico" type="image/x-icon">
+<link rel="icon" href="favicon.png" type="image/png">
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
 
-  :root{
-    --bg: #0A0C12;
-    --bg-panel: #12151E;
-    --bg-card: #161A25;
-    --border: #23283A;
-    --text: #E8EAF0;
-    --text-dim: #8890A6;
-    --accent-violet: #8B5CF6;
-    --accent-cyan: #22D3EE;
-    --accent-amber: #F5A524;
+  :root {
+    color-scheme: dark;
+    --bg: #060816;
+    --bg-elev: #0f1429;
+    --bg-soft: #121a31;
+    --surface: rgba(13, 20, 36, 0.78);
+    --border: rgba(255,255,255,0.12);
+    --text: #f7f8ff;
+    --text-muted: #8ea1c0;
+    --accent: #7c3aed;
+    --accent-2: #22d3ee;
+    --accent-3: #fb923c;
+    --accent-4: #34d399;
+    --shadow: 0 20px 45px rgba(3, 8, 20, 0.35);
     --font-display: 'Space Grotesk', sans-serif;
     --font-body: 'Inter', sans-serif;
     --font-mono: 'JetBrains Mono', monospace;
   }
 
-  *{ box-sizing: border-box; margin:0; padding:0; }
-  html{ scroll-behavior: smooth; }
-  body{
-    background: var(--bg);
-    color: var(--text);
+  :root[data-theme="light"] {
+    color-scheme: light;
+    --bg: #f5f8ff;
+    --bg-elev: #ffffff;
+    --bg-soft: #eef3ff;
+    --surface: rgba(255,255,255,0.8);
+    --border: rgba(15, 23, 42, 0.08);
+    --text: #111827;
+    --text-muted: #5b6478;
+    --accent: #6d28d9;
+    --accent-2: #0891b2;
+    --accent-3: #ea580c;
+    --accent-4: #059669;
+    --shadow: 0 20px 45px rgba(15, 23, 42, 0.1);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
     font-family: var(--font-body);
     min-height: 100vh;
-    padding-bottom: 60px;
+    background:
+      radial-gradient(circle at top left, rgba(124,58,237,0.24), transparent 22%),
+      radial-gradient(circle at top right, rgba(34,211,238,0.2), transparent 18%),
+      var(--bg);
+    color: var(--text);
+    padding: 24px 18px 60px;
+    transition: background .25s ease, color .25s ease;
   }
 
-  a{ color: inherit; text-decoration: none; }
+  a { color: inherit; text-decoration: none; }
 
-  header{
+  .shell {
+    max-width: 1240px;
+    margin: 0 auto;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 28px;
+    box-shadow: var(--shadow);
+    backdrop-filter: blur(18px);
+    overflow: hidden;
+  }
+
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px 28px;
     border-bottom: 1px solid var(--border);
-    padding: 22px 32px;
-    display:flex; align-items:center; justify-content:space-between;
+    gap: 16px;
     flex-wrap: wrap;
-    gap: 14px;
   }
-  .logo{
+
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
     font-family: var(--font-display);
     font-weight: 700;
-    font-size: 22px;
-    letter-spacing: -0.02em;
-    display:flex; align-items:center; gap:10px;
+    font-size: 1.25rem;
+    letter-spacing: -0.03em;
   }
-  .logo-dot{
-    width:10px; height:10px; border-radius:50%;
-    background: var(--accent-violet);
-    box-shadow: 0 0 12px var(--accent-violet);
+
+  .logo-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--accent), var(--accent-2));
+    box-shadow: 0 0 16px rgba(124,58,237,0.45);
   }
-  .status{
-    font-family: var(--font-mono);
-    font-size: 12px;
-    color: var(--text-dim);
-    display:flex; align-items:center; gap:8px;
+
+  .top-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
   }
-  .status .pulse{
-    width:7px;height:7px;border-radius:50%;
-    background: #34D399;
+
+  .status-pill,
+  .theme-toggle,
+  .nav-btn {
+    border-radius: 999px;
+    border: 1px solid var(--border);
+    background: var(--bg-elev);
+    color: var(--text);
+    padding: 8px 12px;
+    font-size: 0.92rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: transform .2s ease, border-color .2s ease, background .2s ease;
+  }
+
+  .status-pill { font-family: var(--font-mono); color: var(--text-muted); }
+  .theme-toggle:hover,
+  .nav-btn:hover { transform: translateY(-1px); border-color: var(--accent); }
+
+  .pulse {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--accent-4);
     animation: pulse 1.6s ease-in-out infinite;
   }
-  @keyframes pulse{
-    0%,100%{ opacity:1; box-shadow:0 0 0 0 rgba(52,211,153,.5);}
-    50%{ opacity:.6; box-shadow:0 0 0 5px rgba(52,211,153,0);}
+
+  @keyframes pulse {
+    0%, 100% { opacity: 1; box-shadow: 0 0 0 0 rgba(52,211,153,0.4); }
+    50% { opacity: .65; box-shadow: 0 0 0 6px rgba(52,211,153,0); }
   }
 
-  .ticker-wrap{
-    border-bottom: 1px solid var(--border);
-    background: var(--bg-panel);
-    overflow: hidden;
-    white-space: nowrap;
-    padding: 10px 0;
-  }
-  .ticker{
-    display: inline-block;
-    font-family: var(--font-mono);
-    font-size: 13px;
-    color: var(--accent-cyan);
-    animation: scroll-left 32s linear infinite;
-  }
-  .ticker span{ margin-right: 48px; color: var(--text-dim); }
-  .ticker span b{ color: var(--accent-cyan); font-weight: 500; }
-  @keyframes scroll-left{
-    0%{ transform: translateX(0); }
-    100%{ transform: translateX(-50%); }
-  }
-
-  .filters{
-    display:flex; gap:8px; flex-wrap:wrap;
-    padding: 24px 32px 4px;
-  }
-  .chip{
-    font-family: var(--font-mono);
-    font-size: 12.5px;
-    padding: 7px 14px;
-    border-radius: 20px;
-    border: 1px solid var(--border);
-    background: var(--bg-panel);
-    color: var(--text-dim);
-    cursor: pointer;
-    transition: all .15s ease;
-  }
-  .chip:hover{ border-color: var(--accent-violet); color: var(--text); }
-  .chip.active{
-    background: var(--accent-violet);
-    border-color: var(--accent-violet);
-    color: #fff;
-  }
-
-  .grid{
+  .hero {
+    padding: 28px;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: 1.4fr .8fr;
     gap: 18px;
-    padding: 20px 32px 40px;
+    border-bottom: 1px solid var(--border);
   }
 
-  .card{
-    background: var(--bg-card);
+  .hero-copy {
+    padding: 18px 6px;
+  }
+
+  .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    border: 1px solid rgba(124,58,237,0.25);
+    background: rgba(124,58,237,0.12);
+    color: var(--accent);
+    padding: 7px 10px;
+    border-radius: 999px;
+    font-size: 0.8rem;
+    font-family: var(--font-mono);
+    margin-bottom: 12px;
+  }
+
+  .hero h1 {
+    font-family: var(--font-display);
+    font-size: clamp(1.8rem, 3vw, 2.7rem);
+    margin-bottom: 10px;
+    line-height: 1.08;
+  }
+
+  .hero p {
+    color: var(--text-muted);
+    font-size: 1rem;
+    line-height: 1.65;
+    max-width: 640px;
+  }
+
+  .hero-actions {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 18px;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    border-radius: 999px;
+    padding: 10px 14px;
+    font-weight: 600;
+    border: 1px solid transparent;
+    cursor: pointer;
+  }
+
+  .btn-primary {
+    background: linear-gradient(135deg, var(--accent), var(--accent-2));
+    color: white;
+  }
+
+  .btn-secondary {
+    background: transparent;
+    border-color: var(--border);
+    color: var(--text);
+  }
+
+  .hero-panel {
+    background: var(--bg-elev);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 16px;
+    display: grid;
+    gap: 12px;
+    align-content: start;
+  }
+
+  .status-card {
+    border-radius: 16px;
+    padding: 14px;
+    background: linear-gradient(135deg, rgba(124,58,237,0.14), rgba(34,211,238,0.1));
+    border: 1px solid rgba(255,255,255,0.06);
+  }
+
+  .status-card-title {
+    font-size: 0.82rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--text-muted);
+    margin-bottom: 6px;
+    font-family: var(--font-mono);
+  }
+
+  .status-card-main {
+    font-size: 1.05rem;
+    font-weight: 700;
+    margin-bottom: 4px;
+  }
+
+  .status-card-meta {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+
+  .status-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .status-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 10px;
+    border-radius: 999px;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid var(--border);
+    color: var(--text-muted);
+    font-size: 0.88rem;
+  }
+
+  .nav {
+    display: flex;
+    gap: 10px;
+    padding: 18px 28px 0;
+    flex-wrap: wrap;
+  }
+
+  .nav-btn.active {
+    background: linear-gradient(135deg, var(--accent), var(--accent-2));
+    color: white;
+    border-color: transparent;
+  }
+
+  .view-section { display: none; padding: 22px 28px 28px; }
+  .view-section.active { display: block; }
+
+  .section-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 16px;
+    flex-wrap: wrap;
+  }
+
+  .section-title h2 {
+    font-family: var(--font-display);
+    font-size: 1.15rem;
+  }
+
+  .section-title p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+  }
+
+  .spotlight-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 14px;
+  }
+
+  .spotlight-card {
+    background: var(--bg-elev);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .spotlight-card strong { font-size: 0.95rem; }
+  .spotlight-card span { color: var(--text-muted); font-size: 0.87rem; }
+
+  .toolbar {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 16px;
+    align-items: center;
+  }
+
+  .search-box {
+    flex: 1 1 260px;
+    background: var(--bg-elev);
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    display: flex;
+    align-items: center;
+    padding: 10px 12px;
+    gap: 8px;
+  }
+
+  .search-box input {
+    border: 0;
+    outline: 0;
+    width: 100%;
+    background: transparent;
+    color: var(--text);
+    font: inherit;
+  }
+
+  .chip {
+    border-radius: 999px;
+    padding: 8px 12px;
+    border: 1px solid var(--border);
+    background: var(--bg-elev);
+    color: var(--text-muted);
+    cursor: pointer;
+    transition: all .2s ease;
+    font-size: 0.9rem;
+  }
+
+  .chip:hover, .chip.active {
+    border-color: transparent;
+    background: linear-gradient(135deg, var(--accent), var(--accent-2));
+    color: white;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    gap: 14px;
+  }
+
+  .card {
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    background: var(--bg-elev);
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    min-height: 220px;
+  }
+
+  .card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .tag {
+    border-radius: 999px;
+    padding: 5px 9px;
+    font-size: 0.75rem;
+    font-family: var(--font-mono);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+
+  .tag.acao { background: rgba(124,58,237,0.16); color: var(--accent); }
+  .tag.rpg { background: rgba(34,211,238,0.16); color: var(--accent-2); }
+  .tag.indie { background: rgba(251,146,60,0.16); color: var(--accent-3); }
+  .tag.estrategia { background: rgba(52,211,153,0.16); color: var(--accent-4); }
+  .tag.simulacao { background: rgba(244,63,94,0.16); color: #f43f5e; }
+
+  .card-time { color: var(--text-muted); font-size: 0.82rem; font-family: var(--font-mono); }
+  .card h3 { font-size: 1rem; line-height: 1.35; }
+  .card p { color: var(--text-muted); font-size: 0.92rem; line-height: 1.6; }
+  .card-footer { margin-top: auto; border-top: 1px dashed var(--border); padding-top: 10px; display:flex; justify-content:space-between; gap:8px; align-items:center; font-size: 0.82rem; color: var(--text-muted); }
+
+  .style-layout {
+    display: grid;
+    grid-template-columns: minmax(240px, 290px) 1fr;
+    gap: 14px;
+  }
+
+  .style-sidebar {
+    background: var(--bg-elev);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    padding: 12px;
+    display: grid;
+    gap: 10px;
+  }
+
+  .sidebar-title {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-family: var(--font-mono);
+    padding: 2px 4px 6px;
+  }
+
+  .style-area-card {
     border: 1px solid var(--border);
     border-radius: 14px;
-    padding: 20px;
-    display:flex; flex-direction:column; gap: 12px;
-    transition: transform .18s ease, border-color .18s ease;
-    position: relative;
-  }
-  .card:hover{
-    transform: translateY(-3px);
-    border-color: #34395199;
+    overflow: hidden;
+    background: rgba(255,255,255,0.02);
   }
 
-  .card-top{
-    display:flex; justify-content:space-between; align-items:center;
-  }
-  .tag{
-    font-family: var(--font-mono);
-    font-size: 10.5px;
-    text-transform: uppercase;
-    letter-spacing: .06em;
-    padding: 3px 9px;
-    border-radius: 5px;
-  }
-  .tag.fps{ background:#8B5CF61A; color: var(--accent-violet); }
-  .tag.rpg{ background:#22D3EE1A; color: var(--accent-cyan); }
-  .tag.indie{ background:#F5A5241A; color: var(--accent-amber); }
-  .tag.plataforma{ background:#EC48991A; color: #EC4899; }
-
-  .card-time{
-    font-family: var(--font-mono);
-    font-size: 11px;
-    color: var(--text-dim);
+  .style-area {
+    width: 100%;
+    border: 0;
+    background: transparent;
+    color: var(--text);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 12px;
+    text-align: left;
+    cursor: pointer;
+    font-weight: 600;
   }
 
-  .card h3{
-    font-family: var(--font-display);
-    font-size: 18px;
-    line-height: 1.3;
-    font-weight: 700;
+  .style-area.active {
+    background: rgba(124,58,237,0.12);
+    color: var(--accent);
   }
 
-  .card p{
-    font-size: 13.5px;
-    line-height: 1.55;
-    color: #B4B9CC;
+  .three-bars {
+    font-size: 1rem;
+    opacity: 0.9;
   }
 
-  .card-footer{
-    margin-top: auto;
-    padding-top: 12px;
-    border-top: 1px dashed var(--border);
-    display:flex; justify-content:space-between; align-items:center;
+  .subareas {
+    display: none;
+    padding: 0 8px 8px;
+    grid-template-columns: 1fr;
+    gap: 8px;
   }
-  .source{
-    font-size: 12px;
-    color: var(--text-dim);
-    display:flex; align-items:center; gap:6px;
-  }
-  .source-dot{
-    width:6px;height:6px;border-radius:50%;
-    background: var(--accent-cyan);
-  }
-  .ai-badge{
-    font-family: var(--font-mono);
-    font-size: 10px;
-    color: var(--text-dim);
+
+  .subareas.open { display: grid; }
+
+  .style-sub {
     border: 1px solid var(--border);
-    padding: 2px 7px;
-    border-radius: 4px;
+    background: var(--bg-elev);
+    color: var(--text);
+    border-radius: 12px;
+    padding: 10px 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    text-align: left;
   }
 
-  footer{
-    text-align:center;
-    padding: 30px;
-    color: var(--text-dim);
-    font-size: 12px;
+  .style-sub.active {
+    border-color: var(--accent);
+    background: rgba(124,58,237,0.12);
+    color: var(--accent);
+  }
+
+  .style-summary {
+    background: var(--bg-elev);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    padding: 18px;
+    display: grid;
+    gap: 8px;
+    align-content: start;
+  }
+
+  .style-summary strong { font-size: 1.05rem; }
+  .style-summary p { color: var(--text-muted); line-height: 1.6; }
+
+  footer {
+    text-align: center;
+    padding: 24px 18px 28px;
+    color: var(--text-muted);
+    font-size: 0.85rem;
     font-family: var(--font-mono);
   }
 
-  @media (max-width: 640px){
-    header, .filters, .grid{ padding-left: 18px; padding-right: 18px; }
+  .empty-state {
+    padding: 22px;
+    border: 1px dashed var(--border);
+    border-radius: 16px;
+    color: var(--text-muted);
+    text-align: center;
+    background: rgba(255,255,255,0.02);
+  }
+
+  @media (max-width: 900px) {
+    .hero { grid-template-columns: 1fr; }
+  }
+
+  @media (max-width: 640px) {
+    body { padding: 10px 10px 40px; }
+    header, .hero, .nav, .view-section { padding-left: 16px; padding-right: 16px; }
+    .view-section { padding-bottom: 20px; }
   }
 </style>
 </head>
 <body>
+  <div class="shell">
+    <header>
+      <div class="logo"><span class="logo-dot"></span>PixelWire</div>
+      <div class="top-actions">
+        <div class="status-pill"><span class="pulse"></span>painel vivo · 07 ago 2026</div>
+        <button class="theme-toggle" id="themeToggle" type="button" aria-label="Alternar tema">🌙 Modo escuro</button>
+      </div>
+    </header>
 
-  <header>
-    <div class="logo"><span class="logo-dot"></span>PixelWire</div>
-    <div class="status"><span class="pulse"></span>painel atualizado automaticamente · 24 jul 2026</div>
-  </header>
+    <section class="hero">
+      <div class="hero-copy">
+        <div class="eyebrow">⚡ Novidades com cara de futuro</div>
+        <h1>Seu radar de jogos, agora com uma experiência mais viva e moderna.</h1>
+        <p>Confira lançamentos, rumores e destaques em um painel mais elegante, com tema claro/escuro, pesquisa instantânea e seletores de estilos para encontrar o que combina com você.</p>
+        <div class="hero-actions">
+          <button class="btn-primary" data-view="explore" type="button">Explorar notícias</button>
+          <button class="btn-secondary" data-view="styles" type="button">Ver estilos de jogos</button>
+        </div>
+      </div>
+      <div class="hero-panel">
+        <div class="status-card">
+          <div class="status-card-title">Resumo do dia</div>
+          <div class="status-card-main">18 novidades em destaque</div>
+          <div class="status-card-meta">Conteúdo atualizado recentemente com uma seleção mais leve e fácil de seguir.</div>
+        </div>
+        <div class="status-row">
+          <span class="status-chip">🕒 Atualizado hoje</span>
+          <span class="status-chip">🎮 Ação + RPG</span>
+        </div>
+      </div>
+    </section>
 
-  <div class="ticker-wrap">
-    <div class="ticker">
-      <span><b>ÚLTIMA HORA —</b> Estúdio indie anuncia sequência surpresa após 6 anos de silêncio</span>
-      <span><b>RUMOR —</b> Novo trailer de RPG de mundo aberto pode vazar nesta semana</span>
-      <span><b>ATUALIZAÇÃO —</b> Patch de balanceamento chega a shooter competitivo</span>
-      <span><b>LANÇAMENTO —</b> Jogo de plataforma ganha data oficial para o próximo trimestre</span>
-      <span><b>ÚLTIMA HORA —</b> Estúdio indie anuncia sequência surpresa após 6 anos de silêncio</span>
-      <span><b>RUMOR —</b> Novo trailer de RPG de mundo aberto pode vazar nesta semana</span>
-      <span><b>ATUALIZAÇÃO —</b> Patch de balanceamento chega a shooter competitivo</span>
-      <span><b>LANÇAMENTO —</b> Jogo de plataforma ganha data oficial para o próximo trimestre</span>
-    </div>
+    <nav class="nav">
+      <button class="nav-btn active" data-view="home" type="button">Início</button>
+      <button class="nav-btn" data-view="explore" type="button">Explorar</button>
+      <button class="nav-btn" data-view="styles" type="button">Estilos</button>
+    </nav>
+
+    <section class="view-section active" id="home">
+      <div class="section-title">
+        <div>
+          <h2>Highlights da semana</h2>
+          <p>Conteúdo selecionado para um panorama mais dinâmico e amigável.</p>
+        </div>
+      </div>
+      <div class="spotlight-grid">
+        <article class="spotlight-card">
+          <strong>Nova geração de FPS</strong>
+          <span>Compartilhar novidades de uma experiência competitiva com visual refinado.</span>
+        </article>
+        <article class="spotlight-card">
+          <strong>RPGs com narrativas profundas</strong>
+          <span>Atualizações focadas em escolhas, mundo aberto e personagens memoráveis.</span>
+        </article>
+        <article class="spotlight-card">
+          <strong>Indies com identidade forte</strong>
+          <span>Uma leva de projetos independentes que apostam em criatividade e estilo.</span>
+        </article>
+      </div>
+    </section>
+
+    <section class="view-section" id="explore">
+      <div class="section-title">
+        <div>
+          <h2>Explorar notícias</h2>
+          <p>Use a busca para filtrar por palavra-chave, categoria ou estilo.</p>
+        </div>
+      </div>
+      <div class="toolbar">
+        <label class="search-box" for="searchInput">
+          <span>🔎</span>
+          <input id="searchInput" type="text" placeholder="Pesquisar por títulos, temas ou fontes...">
+        </label>
+        <button class="chip active" data-category="all" type="button">Todos</button>
+        <button class="chip" data-category="acao" type="button">Ação</button>
+        <button class="chip" data-category="rpg" type="button">RPG</button>
+        <button class="chip" data-category="indie" type="button">Indie</button>
+        <button class="chip" data-category="estrategia" type="button">Estratégia</button>
+      </div>
+      <div class="grid" id="grid"></div>
+    </section>
+
+    <section class="view-section" id="styles">
+      <div class="section-title">
+        <div>
+          <h2>Selecionar estilos de jogos</h2>
+          <p>Toque nas barras para explorar o tipo de experiência que mais combina com você.</p>
+        </div>
+      </div>
+      <div class="style-layout">
+        <aside class="style-sidebar">
+          <div class="sidebar-title">Áreas e subáreas</div>
+          <div id="styleList"></div>
+        </aside>
+        <div class="style-summary" id="styleSummary"></div>
+      </div>
+    </section>
   </div>
 
-  <div class="filters" id="filters">
-    <div class="chip active" data-f="todos">Todos</div>
-    <div class="chip" data-f="fps">FPS</div>
-    <div class="chip" data-f="rpg">RPG</div>
-    <div class="chip" data-f="indie">Indie</div>
-    <div class="chip" data-f="plataforma">Plataformas</div>
-  </div>
-
-  <div class="grid" id="grid"></div>
-
-  <footer>protótipo estático · dados fictícios apenas para visualização de layout</footer>
+  <footer>PixelWire · design renovado com tema dinâmico e conteúdo curado.</footer>
 
 <script>
 const noticias = [
-  {cat:"rpg", tempo:"há 12 min", titulo:"Estúdio confirma expansão para RPG de fantasia lançado em 2025",
-   resumo:"Segundo comunicado oficial, o novo conteúdo trará uma região inédita, novas classes de personagem e deve chegar ainda neste semestre.",
-   fonte:"Fonte: Portal GameHub"},
-  {cat:"fps", tempo:"há 34 min", titulo:"Atualização de equilíbrio chega a shooter competitivo mais jogado do momento",
-   resumo:"O patch reduz o dano de duas armas populares e ajusta tempo de recarga, mudança que já divide opiniões entre jogadores competitivos.",
-   fonte:"Fonte: Arena News"},
-  {cat:"indie", tempo:"há 1h", titulo:"Jogo indie de exploração surpreende e ultrapassa 100 mil cópias vendidas",
-   resumo:"Desenvolvido por uma equipe de apenas três pessoas, o título vem sendo elogiado pela trilha sonora e pelo estilo visual pintado à mão.",
-   fonte:"Fonte: IndieWatch"},
-  {cat:"plataforma", tempo:"há 2h", titulo:"Novo jogo de plataforma ganha data de lançamento oficial",
-   resumo:"A produtora revelou que o título chega ao mercado no próximo trimestre, com versões para consoles de última geração e PC.",
-   fonte:"Fonte: Console Times"},
-  {cat:"rpg", tempo:"há 3h", titulo:"Vazamento sugere remasterização de clássico RPG dos anos 2000",
-   resumo:"Imagens que circulam em fóruns apontam para uma possível remasterização, mas nem estúdio nem publicadora confirmaram o projeto até o momento.",
-   fonte:"Fonte: RetroPixel"},
-  {cat:"indie", tempo:"há 4h", titulo:"Jogo brasileiro de estratégia é selecionado para festival internacional",
-   resumo:"O título, ambientado no sertão nordestino, foi escolhido entre mais de 800 inscritos para a mostra competitiva do evento.",
-   fonte:"Fonte: BR Games Report"},
-  {cat:"fps", tempo:"há 5h", titulo:"Nova temporada traz mapa inédito para jogo de tiro em primeira pessoa",
-   resumo:"Além do novo cenário, a temporada introduz um modo de jogo limitado por tempo e itens cosméticos exclusivos.",
-   fonte:"Fonte: Arena News"},
-  {cat:"plataforma", tempo:"há 6h", titulo:"Coletânea reúne três jogos de plataforma clássicos em versão remasterizada",
-   resumo:"A compilação inclui melhorias gráficas, suporte a resolução 4K e trilha sonora remixada, mantendo a jogabilidade original intacta.",
-   fonte:"Fonte: Console Times"},
+  {
+    cat: 'acao',
+    tempo: 'há 12 min',
+    titulo: 'Estúdio confirma expansão para RPG de fantasia lançado em 2025',
+    resumo: 'Uma grande atualização trará nova região, classes inéditas e um sistema de progressão mais profundo.',
+    fonte: 'Portal GameHub'
+  },
+  {
+    cat: 'acao',
+    tempo: 'há 34 min',
+    titulo: 'Atualização de equilíbrio chega ao shooter competitivo mais jogado',
+    resumo: 'O patch reduz o dano de duas armas populares e ajusta o tempo de recarga.',
+    fonte: 'Arena News'
+  },
+  {
+    cat: 'indie',
+    tempo: 'há 1h',
+    titulo: 'Jogo indie de exploração surpreende e ultrapassa 100 mil cópias',
+    resumo: 'Desenvolvido por uma equipe pequena, o título é elogiado pela trilha sonora e estética artesanal.',
+    fonte: 'IndieWatch'
+  },
+  {
+    cat: 'estrategia',
+    tempo: 'há 2h',
+    titulo: 'Novo jogo de estratégia ganha data de lançamento oficial',
+    resumo: 'A produtora revelou um título com campanha cooperativa e grandes mapas táticos.',
+    fonte: 'Console Times'
+  },
+  {
+    cat: 'rpg',
+    tempo: 'há 3h',
+    titulo: 'Vazamento sugere remasterização de clássico RPG dos anos 2000',
+    resumo: 'Imagens em fóruns apontam para uma nova versão com gráficos renovados.',
+    fonte: 'RetroPixel'
+  },
+  {
+    cat: 'indie',
+    tempo: 'há 4h',
+    titulo: 'Jogo brasileiro de estratégia é selecionado para festival internacional',
+    resumo: 'O título foi escolhido entre mais de 800 inscritos para a mostra competitiva.',
+    fonte: 'BR Games Report'
+  },
+  {
+    cat: 'simulacao',
+    tempo: 'há 5h',
+    titulo: 'Nova temporada traz mapas e mecânicas inéditas para jogo de simulação',
+    resumo: 'A atualização inclui eventos sociais, novos recursos e maior liberdade de criação.',
+    fonte: 'Arena News'
+  },
+  {
+    cat: 'acao',
+    tempo: 'há 6h',
+    titulo: 'Coletânea reúne três jogos de ação clássicos em versão remasterizada',
+    resumo: 'A compilação recebeu melhorias gráficas e suporte a resolução 4K.',
+    fonte: 'Console Times'
+  }
 ];
 
-const grid = document.getElementById("grid");
-const filters = document.getElementById("filters");
+const styleGroups = [
+  {
+    area: 'Jogos',
+    items: [
+      { key: 'acao', title: 'Ação', percent: 92, desc: 'Ideal para quem curte ritmo alto, combate intenso e desafios rápidos.' },
+      { key: 'rpg', title: 'RPG', percent: 85, desc: 'Perfeito para quem gosta de história, evolução de personagem e mundo imersivo.' }
+    ]
+  },
+  {
+    area: 'Modos de jogo',
+    items: [
+      { key: 'estrategia', title: 'Estratégia', percent: 78, desc: 'Ótimo para quem prefere planejar, posicionar e comandar cada decisão.' },
+      { key: 'cooperativo', title: 'Cooperativo', percent: 71, desc: 'Bom para quem gosta de jogar com amigos e criar estratégias em equipe.' }
+    ]
+  },
+  {
+    area: 'Estilo de jogos',
+    items: [
+      { key: 'indie', title: 'Indie', percent: 74, desc: 'Além da estética única, traz ideias ousadas e experiências diferentes.' },
+      { key: 'casual', title: 'Casual', percent: 66, desc: 'Mais leve, acessível e ótimo para sessões rápidas e divertidas.' }
+    ]
+  },
+  {
+    area: 'Gêneros',
+    items: [
+      { key: 'simulacao', title: 'Simulação', percent: 69, desc: 'Atraente para quem curte construir, gerenciar e viver sistemas realistas.' },
+      { key: 'fps', title: 'FPS', percent: 81, desc: 'Muito bom para quem gosta de ação em tempo real e reflexos rápidos.' }
+    ]
+  }
+];
 
-function render(filtro){
-  grid.innerHTML = "";
-  noticias
-    .filter(n => filtro === "todos" || n.cat === filtro)
-    .forEach(n => {
-      const card = document.createElement("div");
-      card.className = "card";
-      card.innerHTML = `
-        <div class="card-top">
-          <span class="tag ${n.cat}">${n.cat}</span>
-          <span class="card-time">${n.tempo}</span>
-        </div>
-        <h3>${n.titulo}</h3>
-        <p>${n.resumo}</p>
-        <div class="card-footer">
-          <span class="source"><span class="source-dot"></span>${n.fonte}</span>
-          <span class="ai-badge">reescrito por IA</span>
-        </div>
-      `;
-      grid.appendChild(card);
-    });
+const grid = document.getElementById('grid');
+const searchInput = document.getElementById('searchInput');
+const categoryButtons = document.querySelectorAll('.chip[data-category]');
+const styleList = document.getElementById('styleList');
+const styleSummary = document.getElementById('styleSummary');
+const themeToggle = document.getElementById('themeToggle');
+const navButtons = document.querySelectorAll('.nav-btn');
+const viewSections = document.querySelectorAll('.view-section');
+const heroButtons = document.querySelectorAll('[data-view]');
+
+let activeCategory = 'all';
+let activeStyle = 'acao';
+let activeArea = 'Jogos';
+
+function setTheme(theme) {
+  document.documentElement.setAttribute('data-theme', theme);
+  localStorage.setItem('pixelwire-theme', theme);
+  const isDark = theme === 'dark';
+  themeToggle.innerHTML = isDark ? '🌙 Modo escuro' : '☀️ Modo claro';
 }
 
-filters.addEventListener("click", (e) => {
-  const chip = e.target.closest(".chip");
-  if(!chip) return;
-  document.querySelectorAll(".chip").forEach(c => c.classList.remove("active"));
-  chip.classList.add("active");
-  render(chip.dataset.f);
+function renderGrid() {
+  const query = searchInput.value.toLowerCase().trim();
+  const filtered = noticias.filter((item) => {
+    const matchesCategory = activeCategory === 'all' || item.cat === activeCategory;
+    const matchesQuery = !query || [item.titulo, item.resumo, item.fonte, item.cat].join(' ').toLowerCase().includes(query);
+    return matchesCategory && matchesQuery;
+  });
+
+  if (!filtered.length) {
+    grid.innerHTML = '<div class="empty-state">Nenhuma notícia encontrada com esse filtro. Tente outra palavra-chave.</div>';
+    return;
+  }
+
+  grid.innerHTML = filtered.map((item) => `
+    <article class="card">
+      <div class="card-top">
+        <span class="tag ${item.cat}">${item.cat}</span>
+        <span class="card-time">${item.tempo}</span>
+      </div>
+      <h3>${item.titulo}</h3>
+      <p>${item.resumo}</p>
+      <div class="card-footer">
+        <span>${item.fonte}</span>
+        <span>IA · curado</span>
+      </div>
+    </article>
+  `).join('');
+}
+
+function renderStyleBars() {
+  styleList.innerHTML = styleGroups.map((group) => {
+    const isActiveArea = group.area === activeArea;
+    return `
+      <div class="style-area-card">
+        <button class="style-area ${isActiveArea ? 'active' : ''}" data-area="${group.area}" type="button">
+          <span class="three-bars">☰</span>
+          <span>${group.area}</span>
+        </button>
+        <div class="subareas ${isActiveArea ? 'open' : ''}">
+          ${group.items.map((style) => `
+            <button class="style-sub ${activeStyle === style.key ? 'active' : ''}" data-area="${group.area}" data-style="${style.key}" type="button">
+              <span>${style.title}</span>
+              <em>${style.percent}%</em>
+            </button>
+          `).join('')}
+        </div>
+      </div>
+    `;
+  }).join('');
+
+  const currentStyle = styleGroups.flatMap((group) => group.items).find((style) => style.key === activeStyle);
+  styleSummary.innerHTML = `
+    <strong>${currentStyle.title}</strong>
+    <p>${currentStyle.desc}</p>
+    <span>Área selecionada: ${activeArea}. Recomendado para quem quer ${currentStyle.title.toLowerCase()} com impacto visual e experiências envolventes.</span>
+  `;
+}
+
+categoryButtons.forEach((button) => {
+  button.addEventListener('click', () => {
+    categoryButtons.forEach((chip) => chip.classList.remove('active'));
+    button.classList.add('active');
+    activeCategory = button.dataset.category;
+    renderGrid();
+  });
 });
 
-render("todos");
-</script>
+searchInput.addEventListener('input', renderGrid);
 
+styleList.addEventListener('click', (event) => {
+  const button = event.target.closest('button');
+  if (!button) return;
+
+  if (button.dataset.area) {
+    activeArea = button.dataset.area;
+    renderStyleBars();
+    return;
+  }
+
+  if (button.dataset.style) {
+    activeStyle = button.dataset.style;
+    activeArea = button.dataset.area;
+    renderStyleBars();
+  }
+});
+
+navButtons.forEach((button) => {
+  button.addEventListener('click', () => {
+    const target = button.dataset.view;
+    navButtons.forEach((item) => item.classList.toggle('active', item === button));
+    viewSections.forEach((section) => section.classList.toggle('active', section.id === target));
+  });
+});
+
+heroButtons.forEach((button) => {
+  if (!button.dataset.view) return;
+  button.addEventListener('click', () => {
+    const target = button.dataset.view;
+    navButtons.forEach((item) => item.classList.toggle('active', item.dataset.view === target));
+    viewSections.forEach((section) => section.classList.toggle('active', section.id === target));
+  });
+});
+
+themeToggle.addEventListener('click', () => {
+  const nextTheme = document.documentElement.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+  setTheme(nextTheme);
+});
+
+const savedTheme = localStorage.getItem('pixelwire-theme');
+setTheme(savedTheme === 'light' ? 'light' : 'dark');
+renderGrid();
+renderStyleBars();
+</script>
 </body>
 </html>
