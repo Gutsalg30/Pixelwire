@@ -376,6 +376,28 @@
     min-height: 220px;
   }
 
+  .card-media {
+    width: 100%;
+    height: 140px;
+    border-radius: 12px;
+    overflow: hidden;
+    background: linear-gradient(180deg, rgba(0,0,0,0.08), rgba(0,0,0,0.18));
+  }
+  .card-media img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    display: block;
+  }
+
+  .card { transition: transform .22s ease, box-shadow .22s ease, opacity .25s ease; opacity:0; animation: fadeIn .38s forwards; }
+  .card:hover { transform: translateY(-6px) scale(1.01); box-shadow: 0 12px 30px rgba(0,0,0,0.35); }
+
+  @keyframes fadeIn { to { opacity: 1; } }
+
+  @keyframes floatY { 0%{ transform: translateY(0);} 50%{ transform: translateY(-4px);} 100%{ transform: translateY(0);} }
+  .card-media { animation: floatY 8s ease-in-out infinite alternate; }
+
   .card-top {
     display: flex;
     justify-content: space-between;
@@ -636,56 +658,64 @@ const noticias = [
     tempo: 'há 12 min',
     titulo: 'Estúdio confirma expansão para RPG de fantasia lançado em 2025',
     resumo: 'Uma grande atualização trará nova região, classes inéditas e um sistema de progressão mais profundo.',
-    fonte: 'Portal GameHub'
+    fonte: 'Portal GameHub',
+    thumb: 'thumb1.png'
   },
   {
     cat: 'acao',
     tempo: 'há 34 min',
     titulo: 'Atualização de equilíbrio chega ao shooter competitivo mais jogado',
     resumo: 'O patch reduz o dano de duas armas populares e ajusta o tempo de recarga.',
-    fonte: 'Arena News'
+    fonte: 'Arena News',
+    thumb: 'thumb2.png'
   },
   {
     cat: 'indie',
     tempo: 'há 1h',
     titulo: 'Jogo indie de exploração surpreende e ultrapassa 100 mil cópias',
     resumo: 'Desenvolvido por uma equipe pequena, o título é elogiado pela trilha sonora e estética artesanal.',
-    fonte: 'IndieWatch'
+    fonte: 'IndieWatch',
+    thumb: 'thumb3.png'
   },
   {
     cat: 'estrategia',
     tempo: 'há 2h',
     titulo: 'Novo jogo de estratégia ganha data de lançamento oficial',
     resumo: 'A produtora revelou um título com campanha cooperativa e grandes mapas táticos.',
-    fonte: 'Console Times'
+    fonte: 'Console Times',
+    thumb: 'thumb4.png'
   },
   {
     cat: 'rpg',
     tempo: 'há 3h',
     titulo: 'Vazamento sugere remasterização de clássico RPG dos anos 2000',
     resumo: 'Imagens em fóruns apontam para uma nova versão com gráficos renovados.',
-    fonte: 'RetroPixel'
+    fonte: 'RetroPixel',
+    thumb: 'thumb5.png'
   },
   {
     cat: 'indie',
     tempo: 'há 4h',
     titulo: 'Jogo brasileiro de estratégia é selecionado para festival internacional',
     resumo: 'O título foi escolhido entre mais de 800 inscritos para a mostra competitiva.',
-    fonte: 'BR Games Report'
+    fonte: 'BR Games Report',
+    thumb: 'thumb6.png'
   },
   {
     cat: 'simulacao',
     tempo: 'há 5h',
     titulo: 'Nova temporada traz mapas e mecânicas inéditas para jogo de simulação',
     resumo: 'A atualização inclui eventos sociais, novos recursos e maior liberdade de criação.',
-    fonte: 'Arena News'
+    fonte: 'Arena News',
+    thumb: 'thumb7.png'
   },
   {
     cat: 'acao',
     tempo: 'há 6h',
     titulo: 'Coletânea reúne três jogos de ação clássicos em versão remasterizada',
     resumo: 'A compilação recebeu melhorias gráficas e suporte a resolução 4K.',
-    fonte: 'Console Times'
+    fonte: 'Console Times',
+    thumb: 'thumb8.png'
   }
 ];
 
@@ -756,6 +786,7 @@ function renderGrid() {
 
   grid.innerHTML = filtered.map((item) => `
     <article class="card">
+      <div class="card-media"><img src="${item.thumb || 'favicon.png'}" alt="thumb"></div>
       <div class="card-top">
         <span class="tag ${item.cat}">${item.cat}</span>
         <span class="card-time">${item.tempo}</span>
