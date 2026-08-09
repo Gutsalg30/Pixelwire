@@ -13,7 +13,7 @@ import sys
 import json
 import hashlib
 import requests
-from urllib.parse import parse_qs, unquote, urlparse
+from urllib.parse import parse_qs, unquote, urlparse, urljoin
 from pathlib import Path
 from PIL import Image
 
@@ -33,7 +33,8 @@ IMAGES_DIR.mkdir(parents=True, exist_ok=True)
 
 QUERIES = [
     'video game', 'game release', 'Ubisoft', 'EA', 'Activision', 'Nintendo', 'Sony', 'Microsoft Gaming',
-    'CD Projekt', 'Square Enix', 'Epic Games', 'Fortnite', 'Elden Ring', 'Call of Duty'
+    'CD Projekt', 'Square Enix', 'Epic Games', 'Fortnite', 'Elden Ring', 'Call of Duty',
+    'IGN Brasil', 'Adrenaline', 'Critical Hits', 'Flor Games', 'IGN Brasil news', 'Crítica de jogos Brasil'
 ]
 
 BING_ENDPOINT = 'https://api.bing.microsoft.com/v7.0/news/search'
@@ -65,6 +66,23 @@ def extract_duckduckgo_url(href):
     return href
 
 
+def extract_image_from_page(url):
+    try:
+        headers = {'User-Agent': USER_AGENT}
+        r = requests.get(url, headers=headers, timeout=15)
+        r.raise_for_status()
+        soup = BeautifulSoup(r.text, 'html.parser')
+        meta = soup.select_one('meta[property="og:image"], meta[name="og:image"], meta[name="twitter:image"], meta[name="twitter:image:src"]')
+        if meta and meta.get('content'):
+            return urljoin(url, meta['content'])
+        icon = soup.find('link', rel=lambda value: value and 'icon' in value.lower())
+        if icon and icon.get('href'):
+            return urljoin(url, icon['href'])
+    except Exception:
+        return None
+    return None
+
+
 def fetch_from_duckduckgo(q, count=5):
     data = {'q': f'{q} news', 's': '0', 'dc': '0'}
     headers = {'User-Agent': USER_AGENT}
@@ -81,12 +99,19 @@ def fetch_from_duckduckgo(q, count=5):
         title = anchor.get_text(strip=True)
         snippet = item.select_one('.result__snippet') or item.select_one('.result__extras__url')
         desc = snippet.get_text(strip=True) if snippet else ''
+        image_url = None
+        img_tag = item.select_one('img.result__img')
+        if img_tag and img_tag.get('src'):
+            image_url = img_tag['src']
+        if not image_url and url:
+            image_url = extract_image_from_page(url)
         results.append({
             'url': url,
             'name': title,
             'description': desc,
             'datePublished': None,
             'provider': [{'name': 'DuckDuckGo'}],
+            'image': {'thumbnail': {'contentUrl': image_url}} if image_url else None,
         })
 
     if not results:
@@ -142,9 +167,11 @@ def normalize_item(item):
     elif isinstance(providers, dict):
         source = providers.get('name', '')
     image_url = None
-    if 'image' in item:
+    if 'image' in item and item['image']:
         t = item['image'].get('thumbnail') or item['image']
         image_url = t.get('contentUrl') if isinstance(t, dict) else None
+    if not image_url and url:
+        image_url = extract_image_from_page(url)
     id_ = url_hash(url or title or desc)
     image_name = None
     thumb_name = None

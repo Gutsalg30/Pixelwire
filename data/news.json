@@ -17,8 +17,8 @@
     "data": null,
     "fonte": "DuckDuckGo",
     "url": "https://www.ign.com/",
-    "imagem": null,
-    "thumb": null,
+    "imagem": "assets/images/58c115c52058.jpg",
+    "thumb": "assets/images/58c115c52058_thumb.jpg",
     "fetched_by": "IA (DuckDuckGo free search)"
   },
   {
@@ -28,8 +28,8 @@
     "data": null,
     "fonte": "DuckDuckGo",
     "url": "https://kotaku.com/",
-    "imagem": null,
-    "thumb": null,
+    "imagem": "assets/images/d21c0f3bbf2b.jpg",
+    "thumb": "assets/images/d21c0f3bbf2b_thumb.jpg",
     "fetched_by": "IA (DuckDuckGo free search)"
   },
   {
@@ -39,19 +39,19 @@
     "data": null,
     "fonte": "DuckDuckGo",
     "url": "https://www.polygon.com/",
-    "imagem": null,
-    "thumb": null,
+    "imagem": "assets/images/14f50558d0be.png",
+    "thumb": "assets/images/14f50558d0be_thumb.jpg",
     "fetched_by": "IA (DuckDuckGo free search)"
   },
   {
-    "id": "e7671dd8002f",
-    "titulo": "Gaming News | VGC - Video Games Chronicle",
-    "resumo": "VGC is the expert source forvideogamesnews. We deliver daily exclusivenews, insight and critique to a knowledgeable audience who trust our coverage.",
+    "id": "9d29ec182845",
+    "titulo": "Game Informer - News, Reviews, Previews, Videos & Release Dates",
+    "resumo": "GameInformer is your source for the latest invideogamenews, reviews, previews, podcasts, and features",
     "data": null,
     "fonte": "DuckDuckGo",
-    "url": "https://www.videogameschronicle.com/category/news/",
-    "imagem": null,
-    "thumb": null,
+    "url": "https://www.gameinformer.com/",
+    "imagem": "assets/images/9d29ec182845.jpg",
+    "thumb": "assets/images/9d29ec182845_thumb.jpg",
     "fetched_by": "IA (DuckDuckGo free search)"
   },
   {
@@ -61,19 +61,8 @@
     "data": null,
     "fonte": "DuckDuckGo",
     "url": "https://store.steampowered.com/explore/upcoming/store.html",
-    "imagem": null,
-    "thumb": null,
-    "fetched_by": "IA (DuckDuckGo free search)"
-  },
-  {
-    "id": "9d29ec182845",
-    "titulo": "Game Informer - News, Reviews, Previews, Videos & Release Dates",
-    "resumo": "GameInformer is your source for the latest in videogamenews, reviews, previews, podcasts, and features",
-    "data": null,
-    "fonte": "DuckDuckGo",
-    "url": "https://www.gameinformer.com/",
-    "imagem": null,
-    "thumb": null,
+    "imagem": "assets/images/2f5c5d6f34da.jpg",
+    "thumb": "assets/images/2f5c5d6f34da_thumb.jpg",
     "fetched_by": "IA (DuckDuckGo free search)"
   },
   {
@@ -94,8 +83,8 @@
     "data": null,
     "fonte": "DuckDuckGo",
     "url": "https://www.releases.com/calendar/games",
-    "imagem": null,
-    "thumb": null,
+    "imagem": "assets/images/20c314e60606.png",
+    "thumb": "assets/images/20c314e60606_thumb.jpg",
     "fetched_by": "IA (DuckDuckGo free search)"
   },
   {
@@ -105,8 +94,8 @@
     "data": null,
     "fonte": "DuckDuckGo",
     "url": "https://www.gamespress.com/",
-    "imagem": null,
-    "thumb": null,
+    "imagem": "assets/images/9161c96b13f5.ico",
+    "thumb": "assets/images/9161c96b13f5_thumb.jpg",
     "fetched_by": "IA (DuckDuckGo free search)"
   },
   {
@@ -116,8 +105,8 @@
     "data": null,
     "fonte": "DuckDuckGo",
     "url": "https://news.ubisoft.com/en-us/",
-    "imagem": null,
-    "thumb": null,
+    "imagem": "assets/images/6dd8872dc572.jpg",
+    "thumb": "assets/images/6dd8872dc572_thumb.jpg",
     "fetched_by": "IA (DuckDuckGo free search)"
   },
   {
@@ -127,8 +116,8 @@
     "data": null,
     "fonte": "DuckDuckGo",
     "url": "https://www.ubisoft.com/en-us/news",
-    "imagem": null,
-    "thumb": null,
+    "imagem": "assets/images/1e97cd0c8e48.ico",
+    "thumb": "assets/images/1e97cd0c8e48_thumb.jpg",
     "fetched_by": "IA (DuckDuckGo free search)"
   },
   {
@@ -138,8 +127,8 @@
     "data": null,
     "fonte": "DuckDuckGo",
     "url": "https://news.ubisoft.com/en-gb/",
-    "imagem": null,
-    "thumb": null,
+    "imagem": "assets/images/e8c0ddc851f7.jpg",
+    "thumb": "assets/images/e8c0ddc851f7_thumb.jpg",
     "fetched_by": "IA (DuckDuckGo free search)"
   },
   {
@@ -160,8 +149,8 @@
     "data": null,
     "fonte": "DuckDuckGo",
     "url": "https://www.ubisoft.com/en-us/company/press",
-    "imagem": null,
-    "thumb": null,
+    "imagem": "assets/images/44bf9a4ad0dd.jpg",
+    "thumb": "assets/images/44bf9a4ad0dd_thumb.jpg",
     "fetched_by": "IA (DuckDuckGo free search)"
   },
   {
@@ -171,19 +160,8 @@
     "data": null,
     "fonte": "DuckDuckGo",
     "url": "https://news.ea.com/press-releases/default.aspx",
-    "imagem": null,
-    "thumb": null,
-    "fetched_by": "IA (DuckDuckGo free search)"
-  },
-  {
-    "id": "bd0c2ca684a6",
-    "titulo": "EA Latest News - Official EA Site",
-    "resumo": "LatestNewsElectronic Arts Inc. Aug 7, 2026 The next mocap evolution: Markerless motion captureEA'smarkerless motion capture uses AI to deliver more realistic animation and immersive gameplay experiences.",
-    "data": null,
-    "fonte": "DuckDuckGo",
-    "url": "https://www.ea.com/news",
-    "imagem": null,
-    "thumb": null,
+    "imagem": "assets/images/5497cacaa883.ico",
+    "thumb": "assets/images/5497cacaa883_thumb.jpg",
     "fetched_by": "IA (DuckDuckGo free search)"
   },
   {
@@ -198,14 +176,25 @@
     "fetched_by": "IA (DuckDuckGo free search)"
   },
   {
-    "id": "dd6b0a161c92",
-    "titulo": "EA News Today | Why did Electronic Arts stock go up today?",
-    "resumo": "What's going on at Electronic Arts (NASDAQ:EA)? Read today'sEAnewsfrom trusted media outlets at MarketBeat.",
+    "id": "30b12e7623e2",
+    "titulo": "Electronic Arts - Overview",
+    "resumo": "July 17, 2026 Battlefield 6 and Top Gun Join Forces for Biggest Blockbuster Season Yet July 16, 2026 Every Team Has an Edge:EASPORTS™ NHL® 27 Overhauls All 32 Arena Atmospheres and Presentation for Total Immersion View AllNews",
     "data": null,
     "fonte": "DuckDuckGo",
-    "url": "https://www.marketbeat.com/stocks/NASDAQ/EA/news/",
-    "imagem": null,
-    "thumb": null,
+    "url": "https://news.ea.com/overview/default.aspx",
+    "imagem": "assets/images/30b12e7623e2.ico",
+    "thumb": "assets/images/30b12e7623e2_thumb.jpg",
+    "fetched_by": "IA (DuckDuckGo free search)"
+  },
+  {
+    "id": "bd0c2ca684a6",
+    "titulo": "EA Latest News - Official EA Site",
+    "resumo": "LatestNewsElectronic Arts Inc. Aug 7, 2026 The next mocap evolution: Markerless motion captureEA'smarkerless motion capture uses AI to deliver more realistic animation and immersive gameplay experiences.",
+    "data": null,
+    "fonte": "DuckDuckGo",
+    "url": "https://www.ea.com/news",
+    "imagem": "assets/images/bd0c2ca684a6.jpg",
+    "thumb": "assets/images/bd0c2ca684a6_thumb.jpg",
     "fetched_by": "IA (DuckDuckGo free search)"
   },
   {
@@ -237,8 +226,8 @@
     "data": null,
     "fonte": "DuckDuckGo",
     "url": "https://blog.activision.com/",
-    "imagem": null,
-    "thumb": null,
+    "imagem": "assets/images/875e33fa97bf.jpg",
+    "thumb": "assets/images/875e33fa97bf_thumb.jpg",
     "fetched_by": "IA (DuckDuckGo free search)"
   },
   {
@@ -248,8 +237,8 @@
     "data": null,
     "fonte": "DuckDuckGo",
     "url": "https://press.activision.com/?view=overview",
-    "imagem": null,
-    "thumb": null,
+    "imagem": "assets/images/a35c65de5ca7.ico",
+    "thumb": "assets/images/a35c65de5ca7_thumb.jpg",
     "fetched_by": "IA (DuckDuckGo free search)"
   },
   {
@@ -259,8 +248,8 @@
     "data": null,
     "fonte": "DuckDuckGo",
     "url": "https://gamerant.com/activision-news/",
-    "imagem": null,
-    "thumb": null,
+    "imagem": "assets/images/9d9ecbcf6136.png",
+    "thumb": "assets/images/9d9ecbcf6136_thumb.jpg",
     "fetched_by": "IA (DuckDuckGo free search)"
   },
   {
@@ -281,8 +270,8 @@
     "data": null,
     "fonte": "DuckDuckGo",
     "url": "https://www.nintendolife.com/news",
-    "imagem": null,
-    "thumb": null,
+    "imagem": "assets/images/9e92cbd1b469.ico",
+    "thumb": "assets/images/9e92cbd1b469_thumb.jpg",
     "fetched_by": "IA (DuckDuckGo free search)"
   },
   {
@@ -292,8 +281,8 @@
     "data": null,
     "fonte": "DuckDuckGo",
     "url": "https://www.nintendo.com/us/whatsnew/",
-    "imagem": null,
-    "thumb": null,
+    "imagem": "assets/images/187e727916a6.jpg",
+    "thumb": "assets/images/187e727916a6_thumb.jpg",
     "fetched_by": "IA (DuckDuckGo free search)"
   },
   {
@@ -303,8 +292,8 @@
     "data": null,
     "fonte": "DuckDuckGo",
     "url": "https://mynintendonews.com/",
-    "imagem": null,
-    "thumb": null,
+    "imagem": "assets/images/f53918c069a3.jpg",
+    "thumb": "assets/images/f53918c069a3_thumb.jpg",
     "fetched_by": "IA (DuckDuckGo free search)"
   },
   {
@@ -314,8 +303,8 @@
     "data": null,
     "fonte": "DuckDuckGo",
     "url": "https://www.nintendolife.com/",
-    "imagem": null,
-    "thumb": null,
+    "imagem": "assets/images/eb33aa56a791.jpg",
+    "thumb": "assets/images/eb33aa56a791_thumb.jpg",
     "fetched_by": "IA (DuckDuckGo free search)"
   },
   {
@@ -325,8 +314,8 @@
     "data": null,
     "fonte": "DuckDuckGo",
     "url": "https://nintendoeverything.com/",
-    "imagem": null,
-    "thumb": null,
+    "imagem": "assets/images/1e57e8dd1a59.png",
+    "thumb": "assets/images/1e57e8dd1a59_thumb.jpg",
     "fetched_by": "IA (DuckDuckGo free search)"
   },
   {
@@ -347,19 +336,8 @@
     "data": null,
     "fonte": "DuckDuckGo",
     "url": "https://www.marketbeat.com/stocks/NYSE/SONY/news/",
-    "imagem": null,
-    "thumb": null,
-    "fetched_by": "IA (DuckDuckGo free search)"
-  },
-  {
-    "id": "b51c7028ab58",
-    "titulo": "Sony CEO Sells Over Half Of His Stock After Controversial PlayStation ...",
-    "resumo": "The timing raised eyebrows immediately.SonyPresident and CEO Hiroki Totoki sold 225,000 shares ofSonystock on July 3, 2026 for approximately $4,729,500, at $21.02 per share. Per an SEC filing ...",
-    "data": null,
-    "fonte": "DuckDuckGo",
-    "url": "https://finance.yahoo.com/markets/stocks/articles/sony-ceo-sells-over-half-074531984.html",
-    "imagem": null,
-    "thumb": null,
+    "imagem": "assets/images/acf4557a5dd9.png",
+    "thumb": "assets/images/acf4557a5dd9_thumb.jpg",
     "fetched_by": "IA (DuckDuckGo free search)"
   },
   {
@@ -376,12 +354,650 @@
   {
     "id": "16c42a1db9e3",
     "titulo": "Sony just handed its TV business to TCL — here's what it means for you",
-    "resumo": "\"Thenewcompany plans to advance its business by leveragingSony'shigh-quality picture and audio technology cultivated over the years, brand value and operational expertise including supply ...",
+    "resumo": "TCL will take a 51% stake inSony'sTV and home audio business while the Japanese giant will retain 49%.",
     "data": null,
     "fonte": "DuckDuckGo",
     "url": "https://www.tomsguide.com/tvs/sony-just-handed-its-tv-business-to-tcl-heres-what-it-means-for-you",
+    "imagem": "assets/images/16c42a1db9e3.jpg",
+    "thumb": "assets/images/16c42a1db9e3_thumb.jpg",
+    "fetched_by": "IA (DuckDuckGo free search)"
+  },
+  {
+    "id": "451f406d17b5",
+    "titulo": "Sony's PlayStation Disc Decision Is Its Biggest Scandal In 20 Years",
+    "resumo": "Gamers are revolting againstSony'sdecision to kill physical discs in 2028, which may be PlayStation's biggest scandal in 20 years, if not ever.",
+    "data": null,
+    "fonte": "DuckDuckGo",
+    "url": "https://www.forbes.com/sites/paultassi/2026/07/02/sonys-playstation-disc-decision-is-its-biggest-scandal-in-20-years/",
+    "imagem": "assets/images/451f406d17b5.jpg",
+    "thumb": "assets/images/451f406d17b5_thumb.jpg",
+    "fetched_by": "IA (DuckDuckGo free search)"
+  },
+  {
+    "id": "5bac08d656f5",
+    "titulo": "XBOX Wire - news.xbox.com",
+    "resumo": "Launches on XBOX Series X|S on August 6 — With aNewUpdate Built for Challenge Seekers ID@XBOX ID@XBOX · 9 min read Indie Selects for August 2026: Adventure is Calling This Summer XBOX Insider XBOX Insider · 4 min read Available for XBOX Insiders: More Control Over Captures, Saves, and Wishlists Great Games Great Games · 6 min read Coming ...",
+    "data": null,
+    "fonte": "DuckDuckGo",
+    "url": "https://news.xbox.com/en-us/",
+    "imagem": "assets/images/5bac08d656f5.png",
+    "thumb": "assets/images/5bac08d656f5_thumb.jpg",
+    "fetched_by": "IA (DuckDuckGo free search)"
+  },
+  {
+    "id": "5b5767dd88e0",
+    "titulo": "Gaming Archives - Source - news.microsoft.com",
+    "resumo": "GamingResults Page (324 results) August 3, 2026 XBOX celebrates 25 years of play with updates, FanFest tour dates and more CompanyNewsJuly 29, 2026 XBOX celebrates 25 years of play and returns to gamescom CompanyNewsJuly 24, 2026 XBOX brings classic games to PC and handhelds CompanyNewsJune 8, 2026 XBOX Games Showcase 2026 recap Company ...",
+    "data": null,
+    "fonte": "DuckDuckGo",
+    "url": "https://news.microsoft.com/source/tag/gaming/",
+    "imagem": "assets/images/5b5767dd88e0.png",
+    "thumb": "assets/images/5b5767dd88e0_thumb.jpg",
+    "fetched_by": "IA (DuckDuckGo free search)"
+  },
+  {
+    "id": "d30cff853c41",
+    "titulo": "Microsoft cuts 2.1% of employees as Xbox unit plans to spin studios - CNBC",
+    "resumo": "Microsoftcuts 4,800 jobs, as Xbox unit downsizes and plans to spin off fourgamingstudios",
+    "data": null,
+    "fonte": "DuckDuckGo",
+    "url": "https://www.cnbc.com/2026/07/06/microsoft-cuts-2point1percent-of-employees-as-xbox-unit-plans-to-spin-studios.html",
     "imagem": null,
     "thumb": null,
+    "fetched_by": "IA (DuckDuckGo free search)"
+  },
+  {
+    "id": "21b9db762691",
+    "titulo": "XBOX And Gaming | Microsoft News Now",
+    "resumo": "Discover the latest Xbox andgamingnews, includingnewfeatures, game releases, and updates to enhance yourMicrosoftgamingexperience.",
+    "data": null,
+    "fonte": "DuckDuckGo",
+    "url": "https://msftnewsnow.com/xbox-and-gaming/",
+    "imagem": "assets/images/21b9db762691.jpeg",
+    "thumb": "assets/images/21b9db762691_thumb.jpg",
+    "fetched_by": "IA (DuckDuckGo free search)"
+  },
+  {
+    "id": "60612ae3e29c",
+    "titulo": "Latest Xbox News | Pure Xbox",
+    "resumo": "NewsHere's What Might Leave Xbox Game Pass In September 2026 Some early predictions! What's leaving Xbox Game Pass in September 2026? Well,Microsofthasn't confirmed anything just yet, but based on some games that were added to the service this time last year, we can at least make a few predictions ahead of time.",
+    "data": null,
+    "fonte": "DuckDuckGo",
+    "url": "https://www.purexbox.com/news",
+    "imagem": "assets/images/60612ae3e29c.ico",
+    "thumb": "assets/images/60612ae3e29c_thumb.jpg",
+    "fetched_by": "IA (DuckDuckGo free search)"
+  },
+  {
+    "id": "42fb9c997c6a",
+    "titulo": "News Archive - CD PROJEKT",
+    "resumo": "TheCDPROJEKTGroups wraps up 2025 March 19, 2026 In 2025 sales revenues of theCDPROJEKTGroup amounted to 867 million PLN, while its consolidated net profit reached 595 million… Read more",
+    "data": null,
+    "fonte": "DuckDuckGo",
+    "url": "https://www.cdprojekt.com/en/media/news/",
+    "imagem": "assets/images/42fb9c997c6a.png",
+    "thumb": "assets/images/42fb9c997c6a_thumb.jpg",
+    "fetched_by": "IA (DuckDuckGo free search)"
+  },
+  {
+    "id": "8a27fe8c20a4",
+    "titulo": "News - CD PROJEKT RED Press Center",
+    "resumo": "CDPROJEKTRED is a video game development studio focused on storytelling ingenuity, technical innovation, and absolute quality.",
+    "data": null,
+    "fonte": "DuckDuckGo",
+    "url": "https://press.cdprojektred.com/en/news",
+    "imagem": "assets/images/8a27fe8c20a4.jpg",
+    "thumb": "assets/images/8a27fe8c20a4_thumb.jpg",
+    "fetched_by": "IA (DuckDuckGo free search)"
+  },
+  {
+    "id": "dddab93c00c0",
+    "titulo": "Upcoming CD Projekt Red games | GamesRadar+",
+    "resumo": "Here's every upcomingCDProjetk Red game in development, from The Witcher 4 to a mysteriousnewIP",
+    "data": null,
+    "fonte": "DuckDuckGo",
+    "url": "https://www.gamesradar.com/upcoming-cd-projekt-red-games/",
+    "imagem": "assets/images/dddab93c00c0.jpg",
+    "thumb": "assets/images/dddab93c00c0_thumb.jpg",
+    "fetched_by": "IA (DuckDuckGo free search)"
+  },
+  {
+    "id": "1d0903294f05",
+    "titulo": "NEWS - Forums - CD PROJEKT RED",
+    "resumo": "It's All About You! — 5 years of Cyberpunk 2077: Never Fade Away",
+    "data": null,
+    "fonte": "DuckDuckGo",
+    "url": "https://forums.cdprojektred.com/index.php?forums/news_cp/",
+    "imagem": "assets/images/1d0903294f05.png",
+    "thumb": "assets/images/1d0903294f05_thumb.jpg",
+    "fetched_by": "IA (DuckDuckGo free search)"
+  },
+  {
+    "id": "52c6e947e625",
+    "titulo": "Cyberpunk 2077 Sequel Gets Official Update - Screen Rant",
+    "resumo": "Cyberpunk 2077's highly anticipated sequel just got an official update from developers atCDProjektRed, and it's looking quite promising.",
+    "data": null,
+    "fonte": "DuckDuckGo",
+    "url": "https://screenrant.com/cyberpunk-2077-sequel-official-update-may-28/",
+    "imagem": "assets/images/52c6e947e625.jpg",
+    "thumb": "assets/images/52c6e947e625_thumb.jpg",
+    "fetched_by": "IA (DuckDuckGo free search)"
+  },
+  {
+    "id": "11fcfe847cbc",
+    "titulo": "SQUARE ENIX | The Official SQUARE ENIX Website - News",
+    "resumo": "Connect withSQUAREENIXand get the latestnewsand updates about your favourite games and upcoming releases. Find out more about the company, careers, support, and global site.",
+    "data": null,
+    "fonte": "DuckDuckGo",
+    "url": "https://www.square-enix-games.com/en_US/news",
+    "imagem": "assets/images/11fcfe847cbc.ico",
+    "thumb": "assets/images/11fcfe847cbc_thumb.jpg",
+    "fetched_by": "IA (DuckDuckGo free search)"
+  },
+  {
+    "id": "726cb9cd91db",
+    "titulo": "The Official SQUARE ENIX Website",
+    "resumo": "Welcome to the officialSQUAREENIXwebsite. Find all the latestnewsand updates about your favourite games and upcoming releases.",
+    "data": null,
+    "fonte": "DuckDuckGo",
+    "url": "https://www.square-enix-games.com/en_US/home",
+    "imagem": "assets/images/726cb9cd91db.jpg",
+    "thumb": "assets/images/726cb9cd91db_thumb.jpg",
+    "fetched_by": "IA (DuckDuckGo free search)"
+  },
+  {
+    "id": "26f8910c9597",
+    "titulo": "Square Enix Unveils New Kingdom Hearts Announcements During Nintendo ...",
+    "resumo": "Anewinstallment in the action role-playing series developed and published bySQUAREENIX, KINGDOM HEARTS IV follows protagonist Sora and some familiar characters as they journey through the mysterious city of Quadratum. Sora will once again journey to various worlds, wherenewfigures cross his path andnewpowers awaken in this next chapter.",
+    "data": null,
+    "fonte": "DuckDuckGo",
+    "url": "https://press.na.square-enix.com/SQUARE-ENIX-UNVEILS-NEW-KINGDOM-HEARTS-ANNOUNCEMENTS-DURING-NINTENDO-D",
+    "imagem": "assets/images/26f8910c9597.png",
+    "thumb": "assets/images/26f8910c9597_thumb.jpg",
+    "fetched_by": "IA (DuckDuckGo free search)"
+  },
+  {
+    "id": "740ec5e80cda",
+    "titulo": "Square Enix News - Page 1 | TechRaptor",
+    "resumo": "The latestnewsaboutSquareEnixand their games can be found right here - from announcements and updates, to breakingnews.",
+    "data": null,
+    "fonte": "DuckDuckGo",
+    "url": "https://techraptor.net/companies/square-enix/news",
+    "imagem": "assets/images/740ec5e80cda.png",
+    "thumb": "assets/images/740ec5e80cda_thumb.jpg",
+    "fetched_by": "IA (DuckDuckGo free search)"
+  },
+  {
+    "id": "572f63d03c82",
+    "titulo": "The latest Square Enix news, releases and reviews | GamesRadar+",
+    "resumo": "Read up on the latestnewsaboutSquareEnix, coveringnewgame releases, reviews of the latest and greatest, and every importantSquareEnixannouncement and event.",
+    "data": null,
+    "fonte": "DuckDuckGo",
+    "url": "https://www.gamesradar.com/tag/square-enix/",
+    "imagem": "assets/images/572f63d03c82.ico",
+    "thumb": "assets/images/572f63d03c82_thumb.jpg",
+    "fetched_by": "IA (DuckDuckGo free search)"
+  },
+  {
+    "id": "820edc51fe58",
+    "titulo": "Epic Newsroom - Epic Games",
+    "resumo": "Catch up on the latestnews& announcements. The LEGO Group andEpicGamesTeam Up to Build a Place for Kids to Play in the Metaverse",
+    "data": null,
+    "fonte": "DuckDuckGo",
+    "url": "https://www.epicgames.com/site/news/",
+    "imagem": "assets/images/820edc51fe58.jpg",
+    "thumb": "assets/images/820edc51fe58_thumb.jpg",
+    "fetched_by": "IA (DuckDuckGo free search)"
+  },
+  {
+    "id": "d3413daa60f0",
+    "titulo": "The Latest Blog Articles About PC Gaming - Epic Games News",
+    "resumo": "Get the latestEpicGamesStoreNewsabout upcominggames, sales and more. Your best source of information for PC gaming.",
+    "data": null,
+    "fonte": "DuckDuckGo",
+    "url": "https://store.epicgames.com/news/?lang=en-US",
+    "imagem": null,
+    "thumb": null,
+    "fetched_by": "IA (DuckDuckGo free search)"
+  },
+  {
+    "id": "ccdc2c8fa114",
+    "titulo": "Fortnite News - Get the Latest Updates - Fortnite di Epic Games",
+    "resumo": "Keep up with what's happening in your favorite Fortnitegames, including Battle Royale, LEGO Fortnite, Fortnite Festival, and more!",
+    "data": null,
+    "fonte": "DuckDuckGo",
+    "url": "https://www.fortnite.com/news",
+    "imagem": null,
+    "thumb": null,
+    "fetched_by": "IA (DuckDuckGo free search)"
+  },
+  {
+    "id": "a8c601189c45",
+    "titulo": "Today's layoffs - Epic Games",
+    "resumo": "Epicsurvived upheavals in 1990's with the move from 2D to 3D with Unreal 1; in the 2000's building consolegameswith Gears of War; and in 2012 moving to online gaming with Paragon and Fortnite.",
+    "data": null,
+    "fonte": "DuckDuckGo",
+    "url": "https://www.epicgames.com/site/news/todays-layoffs",
+    "imagem": "assets/images/a8c601189c45.png",
+    "thumb": "assets/images/a8c601189c45_thumb.jpg",
+    "fetched_by": "IA (DuckDuckGo free search)"
+  },
+  {
+    "id": "29ffc6e91df5",
+    "titulo": "Fortnite News - Fortnite.GG",
+    "resumo": "NewCreatureGamesFierce Sidekick battles, wild adventures, and deep bonds await! Dive intonewcreature-basedgameswhere Sidekicks take center stage.",
+    "data": null,
+    "fonte": "DuckDuckGo",
+    "url": "https://fortnite.gg/news",
+    "imagem": "assets/images/29ffc6e91df5.jpg",
+    "thumb": "assets/images/29ffc6e91df5_thumb.jpg",
+    "fetched_by": "IA (DuckDuckGo free search)"
+  },
+  {
+    "id": "25ab43b73b66",
+    "titulo": "Google News - Fortnite - Latest",
+    "resumo": "Read full articles, watch videos, browse thousands of titles and more on the \"Fortnite\" topic with GoogleNews.",
+    "data": null,
+    "fonte": "DuckDuckGo",
+    "url": "https://news.google.com/topics/CAAqJAgKIh5DQkFTRUFvS0wyMHZNR3M1WW1NNU1CSUNaVzRvQUFQAQ",
+    "imagem": "assets/images/25ab43b73b66.jpg",
+    "thumb": "assets/images/25ab43b73b66_thumb.jpg",
+    "fetched_by": "IA (DuckDuckGo free search)"
+  },
+  {
+    "id": "f1817d0a63f5",
+    "titulo": "Fortnite News",
+    "resumo": "Your #1 source for the latestFortnitenews, information and more",
+    "data": null,
+    "fonte": "DuckDuckGo",
+    "url": "https://fortnitenews.com/",
+    "imagem": "assets/images/f1817d0a63f5.png",
+    "thumb": "assets/images/f1817d0a63f5_thumb.jpg",
+    "fetched_by": "IA (DuckDuckGo free search)"
+  },
+  {
+    "id": "ee17675d6541",
+    "titulo": "Fortnite (@Fortnite) / Posts / X",
+    "resumo": "📎FortniteFortniteAug 7 Congratulations to our five #DesignASprite winners - @enorull, @Conejito_sam, @matsubokiri, Avila215, and u/StinkyPrincessGoose! Arriving next season with anewgeneration of Sprites, your collection will be immortalized in thenewSprite Garden. Check it out! fn.gg/SpriteGarden 💬 533",
+    "data": null,
+    "fonte": "DuckDuckGo",
+    "url": "https://x.com/Fortnite",
+    "imagem": "assets/images/ee17675d6541.jpg",
+    "thumb": "assets/images/ee17675d6541_thumb.jpg",
+    "fetched_by": "IA (DuckDuckGo free search)"
+  },
+  {
+    "id": "34dbae1aae51",
+    "titulo": "ELDEN RING news | Bandai Namco Europe",
+    "resumo": "LatestNewsonELDENRING, set for Xbox Series X|S, PS5, Xbox One, PS4 and PC Stay up to date with all the latestnewsaboutELDENRING— updates, patch notes, exclusive content, events, official announcements, and more. Our articles keep you informed on everything happening in and aroundELDENRING.",
+    "data": null,
+    "fonte": "DuckDuckGo",
+    "url": "https://en.bandainamcoent.eu/elden-ring/elden-ring/news",
+    "imagem": "assets/images/34dbae1aae51.jpg",
+    "thumb": "assets/images/34dbae1aae51_thumb.jpg",
+    "fetched_by": "IA (DuckDuckGo free search)"
+  },
+  {
+    "id": "5a0db57a37de",
+    "titulo": "Elden Ring Officially Getting New DLC On All Platforms",
+    "resumo": "EldenRingis hands-down the most popular and beloved open-world RPG by developers at FromSoftware, and after the release of the Shadow of the Erdtree DLC, it wasn't clear if players would be getting any officialnewdownloadable content in the future. WithEldenRingNightreign marking a shift in direction for the franchise, future DLC forEldenRingseemed increasingly unlikely. However ...",
+    "data": null,
+    "fonte": "DuckDuckGo",
+    "url": "https://screenrant.com/elden-ring-2026-dlc-official-new-content/",
+    "imagem": "assets/images/5a0db57a37de.jpg",
+    "thumb": "assets/images/5a0db57a37de_thumb.jpg",
+    "fetched_by": "IA (DuckDuckGo free search)"
+  },
+  {
+    "id": "0b5e2c192749",
+    "titulo": "Elden Ring Officially Returns With New DLC This Month",
+    "resumo": "EldenRingfans should rejoice, as the legendary title is coming back in a big way with brand-newDLC scheduled to drop later this month.",
+    "data": null,
+    "fonte": "DuckDuckGo",
+    "url": "https://screenrant.com/elden-ring-official-dlc-august-2026-psa/",
+    "imagem": "assets/images/0b5e2c192749.png",
+    "thumb": "assets/images/0b5e2c192749_thumb.jpg",
+    "fetched_by": "IA (DuckDuckGo free search)"
+  },
+  {
+    "id": "eb62771fef4c",
+    "titulo": "'Elden Ring' Officially Returns With New Release in 2027 - Collider",
+    "resumo": "Steamforged'sEldenRing: Rot & Sorcery board game release arrives in July 2027 withnewcore boxes set in Liurnia and Caelid.",
+    "data": null,
+    "fonte": "DuckDuckGo",
+    "url": "https://collider.com/elden-ring-rot-and-sorcery-july-2027-release/",
+    "imagem": "assets/images/eb62771fef4c.jpg",
+    "thumb": "assets/images/eb62771fef4c_thumb.jpg",
+    "fetched_by": "IA (DuckDuckGo free search)"
+  },
+  {
+    "id": "3fbefaa013e4",
+    "titulo": "EldenRingWorld | Elden Ring Game Guide & News Platform",
+    "resumo": "EldenRingWorld is a dedicatedEldenRinggame guide andnewsplatform, providing the latest walkthroughs, character builds, weapon and equipment recommendations, in-depth exploration, and version updates. Your one-stop destination for allEldenRingenthusiasts!",
+    "data": null,
+    "fonte": "DuckDuckGo",
+    "url": "https://eldenringworld.com/",
+    "imagem": null,
+    "thumb": null,
+    "fetched_by": "IA (DuckDuckGo free search)"
+  },
+  {
+    "id": "8f7dd6a19c2a",
+    "titulo": "Call of Duty®: Blog",
+    "resumo": "Find up-to-date information regarding recent game developments, strategies, and more to enhance yourCallofDutyexperience.",
+    "data": null,
+    "fonte": "DuckDuckGo",
+    "url": "https://www.callofduty.com/blog",
+    "imagem": null,
+    "thumb": null,
+    "fetched_by": "IA (DuckDuckGo free search)"
+  },
+  {
+    "id": "3a585b2cdbcf",
+    "titulo": "Call of Duty News - Dexerto",
+    "resumo": "CallofDutybreakingnews, patch notes, and updates across Warzone, Black Ops, Modern Warfare, and CoD esports.",
+    "data": null,
+    "fonte": "DuckDuckGo",
+    "url": "https://www.dexerto.com/call-of-duty/",
+    "imagem": "assets/images/3a585b2cdbcf.jpg",
+    "thumb": "assets/images/3a585b2cdbcf_thumb.jpg",
+    "fetched_by": "IA (DuckDuckGo free search)"
+  },
+  {
+    "id": "ace834cf7a6b",
+    "titulo": "CharlieINTEL | Call of Duty, Battlefield 6 & REDSEC Meta Weapon ...",
+    "resumo": "The leading source forCallofDuty& Battlefield meta loadouts, best weapons tier lists, covering Black Ops 7, Battlefield 6, BF RedSec, Warzone, and more shooter games.",
+    "data": null,
+    "fonte": "DuckDuckGo",
+    "url": "https://www.charlieintel.com/",
+    "imagem": "assets/images/ace834cf7a6b.jpg",
+    "thumb": "assets/images/ace834cf7a6b_thumb.jpg",
+    "fetched_by": "IA (DuckDuckGo free search)"
+  },
+  {
+    "id": "adb7181fab6d",
+    "titulo": "Call of Duty News - Esports.net",
+    "resumo": "CallofDutyApril 1, 2026CallofDuty: Black Ops 7 puts players in a walk-in closet for April Fool's Day, saving me from unfunny tweets April 1st is the worst day to be an esports journalist. You just mindlessly scroll X, looking at a bunch of clearly fake trades, acquisitions, firings, and game updates. However,…",
+    "data": null,
+    "fonte": "DuckDuckGo",
+    "url": "https://www.esports.net/news/cod/",
+    "imagem": null,
+    "thumb": null,
+    "fetched_by": "IA (DuckDuckGo free search)"
+  },
+  {
+    "id": "4f809ee799f4",
+    "titulo": "Call of Duty® | Best-Selling Video Game Franchise",
+    "resumo": "Pre-orderCallofDuty: Modern Warfare 4 now.",
+    "data": null,
+    "fonte": "DuckDuckGo",
+    "url": "https://www.callofduty.com/",
+    "imagem": null,
+    "thumb": null,
+    "fetched_by": "IA (DuckDuckGo free search)"
+  },
+  {
+    "id": "dab0d47d9f83",
+    "titulo": "IGN Brasil",
+    "resumo": "IGNBrasilé o maior site de games para Xbox, PS3, PS4, PC, Wii U, Nintendo 3DS, PS Vita, iPhone e Android, com reviews, notícias, previews e vídeos.",
+    "data": null,
+    "fonte": "DuckDuckGo",
+    "url": "https://br.ign.com/",
+    "imagem": "assets/images/dab0d47d9f83.png",
+    "thumb": "assets/images/dab0d47d9f83_thumb.jpg",
+    "fetched_by": "IA (DuckDuckGo free search)"
+  },
+  {
+    "id": "3fec9312b143",
+    "titulo": "Brasil dos Games",
+    "resumo": "IGNBrasilé o maior site de games para Xbox, PS3, PS4, PC, Wii U, Nintendo 3DS, PS Vita, iPhone e Android, com reviews, notícias, previews e vídeos.",
+    "data": null,
+    "fonte": "DuckDuckGo",
+    "url": "https://br.ign.com/brasil/",
+    "imagem": "assets/images/3fec9312b143.jpg",
+    "thumb": "assets/images/3fec9312b143_thumb.jpg",
+    "fetched_by": "IA (DuckDuckGo free search)"
+  },
+  {
+    "id": "b6eb180de7be",
+    "titulo": "IGN News - IGN Brasil",
+    "resumo": "IGNBrasilé o maior site de games para Xbox, PS3, PS4, PC, Wii U, Nintendo 3DS, PS Vita, iPhone e Android, com reviews, notícias, previews e vídeos.",
+    "data": null,
+    "fonte": "DuckDuckGo",
+    "url": "https://br.ign.com/ign-news",
+    "imagem": "assets/images/b6eb180de7be.ico",
+    "thumb": "assets/images/b6eb180de7be_thumb.jpg",
+    "fetched_by": "IA (DuckDuckGo free search)"
+  },
+  {
+    "id": "83f11b5983f4",
+    "titulo": "Siga o IGN Brasil no Google: nova função reúne todo conteúdo da marca ...",
+    "resumo": "OIGNBrasilé a sua principal fonte de notícias de games, animes, cultura pop e tecnologia. Estamos desde 2015 trazendo as notícias, entrevistas, reviews e reportagens sobre o universo gamer e tudo que o permeia — e agora você tem mais um canal para poder acompanhar toda a nossa cobertura ...",
+    "data": null,
+    "fonte": "DuckDuckGo",
+    "url": "https://br.ign.com/games/146860/news/siga-o-ign-brasil-no-google-nova-funcao-reune-todo-conteudo-da-marca-em-um-so-lugar",
+    "imagem": "assets/images/83f11b5983f4.jpg",
+    "thumb": "assets/images/83f11b5983f4_thumb.jpg",
+    "fetched_by": "IA (DuckDuckGo free search)"
+  },
+  {
+    "id": "8e350def98e0",
+    "titulo": "IGN ao vivo - IGN Brasil",
+    "resumo": "IGNBrasilé o maior site de games para Xbox, PS3, PS4, PC, Wii U, Nintendo 3DS, PS Vita, iPhone e Android, com reviews, notícias, previews e vídeos.",
+    "data": null,
+    "fonte": "DuckDuckGo",
+    "url": "https://br.ign.com/ign-brasil",
+    "imagem": "assets/images/8e350def98e0.ico",
+    "thumb": "assets/images/8e350def98e0_thumb.jpg",
+    "fetched_by": "IA (DuckDuckGo free search)"
+  },
+  {
+    "id": "a74660437d9a",
+    "titulo": "Notícias - Adrenaline",
+    "resumo": "Das simples atualizações para sistemas operacionais, jogos e drivers diversos, até os maiores lançamentos das big techs, você encontra na aba notícias. Cobrimos as principais notícias do dia a dia do mundo da tecnologia, apurando tudo o que você precisa saber para ficar inteirado!",
+    "data": null,
+    "fonte": "DuckDuckGo",
+    "url": "https://www.adrenaline.com.br/noticias/",
+    "imagem": "assets/images/a74660437d9a.png",
+    "thumb": "assets/images/a74660437d9a_thumb.jpg",
+    "fetched_by": "IA (DuckDuckGo free search)"
+  },
+  {
+    "id": "792fd7799fb7",
+    "titulo": "News - Adrenaline",
+    "resumo": "Stay up to date with the latestnewsfromAdrenaline'steam of banking industry experts, including award wins, press, and event presence.",
+    "data": null,
+    "fonte": "DuckDuckGo",
+    "url": "https://www.adrenalinex.com/news/",
+    "imagem": "assets/images/792fd7799fb7.jpg",
+    "thumb": "assets/images/792fd7799fb7_thumb.jpg",
+    "fetched_by": "IA (DuckDuckGo free search)"
+  },
+  {
+    "id": "7a56a02527ba",
+    "titulo": "Adrenaline | Building Brand Experiences for Banks & Credit Unions",
+    "resumo": "News& ViewsAdrenalineOpens St. Louis Digital Hub to Transform Digital Signage and Branch Experience for Financial Institutions On-Demand Webinar: Stronger Relationships Future-Proof Financial Brands Closing Banking's Experience Gap Bank Rebranding Best Practices - Lessons from Leading Financial Institutions",
+    "data": null,
+    "fonte": "DuckDuckGo",
+    "url": "https://www.adrenalinex.com/",
+    "imagem": "assets/images/7a56a02527ba.png",
+    "thumb": "assets/images/7a56a02527ba_thumb.jpg",
+    "fetched_by": "IA (DuckDuckGo free search)"
+  },
+  {
+    "id": "a3e9f636ffb4",
+    "titulo": "Adrenaline - Fonte de informação sobre Tecnologia e Jogos",
+    "resumo": "Fonte de informação sobre Tecnologia e Jogos, com notícias e análises de eletrônicos de consumo, gadgets, hardwares para computador e games.",
+    "data": null,
+    "fonte": "DuckDuckGo",
+    "url": "https://www.adrenaline.com.br/",
+    "imagem": "assets/images/a3e9f636ffb4.png",
+    "thumb": "assets/images/a3e9f636ffb4_thumb.jpg",
+    "fetched_by": "IA (DuckDuckGo free search)"
+  },
+  {
+    "id": "a391aa4edca2",
+    "titulo": "General News - VB Adrenaline",
+    "resumo": "View the latest GeneralNewsat VBAdrenalineVolleyballNews",
+    "data": null,
+    "fonte": "DuckDuckGo",
+    "url": "https://www.vbadrenaline.com/news/categories/general-news",
+    "imagem": "assets/images/a391aa4edca2.png",
+    "thumb": "assets/images/a391aa4edca2_thumb.jpg",
+    "fetched_by": "IA (DuckDuckGo free search)"
+  },
+  {
+    "id": "e0d1be21b17b",
+    "titulo": "Critical Hit News",
+    "resumo": "Stay updated with the latest tabletop gaming updates, community events, andCriticalHitGames updates to enhance your gaming experience!",
+    "data": null,
+    "fonte": "DuckDuckGo",
+    "url": "https://critical-hit.com/updates",
+    "imagem": "assets/images/e0d1be21b17b.jpg",
+    "thumb": "assets/images/e0d1be21b17b_thumb.jpg",
+    "fetched_by": "IA (DuckDuckGo free search)"
+  },
+  {
+    "id": "18465830d964",
+    "titulo": "Critical Hits — Everything tabletop gaming since 2005",
+    "resumo": "CriticalHitsstaff can be reached via the contact information on their individual staff pages and in their articles. If you want to reach our senior staff, email staff @critical-hits.com.",
+    "data": null,
+    "fonte": "DuckDuckGo",
+    "url": "https://critical-hits.com/",
+    "imagem": "assets/images/18465830d964.jpg",
+    "thumb": "assets/images/18465830d964_thumb.jpg",
+    "fetched_by": "IA (DuckDuckGo free search)"
+  },
+  {
+    "id": "296fa41b913e",
+    "titulo": "Newest Critical Hits — Critical Hits",
+    "resumo": "The insatiable need for commerce drives an insatiable need for thenews. From Eversink back alley gossip circles to the rarified circle of the Triskadane, everyone needs to know what's going on everywhere, all the time. Often, whoever lays hands on thenewsfirst, wins.",
+    "data": null,
+    "fonte": "DuckDuckGo",
+    "url": "https://critical-hits.com/blog/category/critical-hits/",
+    "imagem": "assets/images/296fa41b913e.jpg",
+    "thumb": "assets/images/296fa41b913e_thumb.jpg",
+    "fetched_by": "IA (DuckDuckGo free search)"
+  },
+  {
+    "id": "1b93b67286ed",
+    "titulo": "Weekly Feed · Critical Hit News",
+    "resumo": "Onehit, all the drops — anime, manga, games, TCGs, and adaptations. Every release date in one calendar.",
+    "data": null,
+    "fonte": "DuckDuckGo",
+    "url": "https://criticalrelease.com/week",
+    "imagem": null,
+    "thumb": null,
+    "fetched_by": "IA (DuckDuckGo free search)"
+  },
+  {
+    "id": "31403276fc44",
+    "titulo": "Release Calendar · Critical Hit News",
+    "resumo": "Onehit, all the drops — anime, manga, games, TCGs, and adaptations. Every release date in one calendar.",
+    "data": null,
+    "fonte": "DuckDuckGo",
+    "url": "https://criticalrelease.com/",
+    "imagem": null,
+    "thumb": null,
+    "fetched_by": "IA (DuckDuckGo free search)"
+  },
+  {
+    "id": "345d7999f1dc",
+    "titulo": "florr.io",
+    "resumo": "Florr.io is agamewhere players battle enemies and collect rare petals to enhance their collection.",
+    "data": null,
+    "fonte": "DuckDuckGo",
+    "url": "https://florr.io/",
+    "imagem": null,
+    "thumb": null,
+    "fetched_by": "IA (DuckDuckGo free search)"
+  },
+  {
+    "id": "010fa5b0228e",
+    "titulo": "Changelog | Florr.io Community Wiki | Fandom",
+    "resumo": "Here are all the Changelog updates for Florr.io. This changelog can also be accessed in the title screen. Most updates are often not mentioned in the changelog. To see the changes these updates make, view Updates. - A mysterious rift has opened in the garden. It seems to take flowers back to a simple time. - Unique forging mechanic has been reworked. They will now always require 5 Supers to ...",
+    "data": null,
+    "fonte": "DuckDuckGo",
+    "url": "https://official-florrio.fandom.com/wiki/Changelog",
+    "imagem": null,
+    "thumb": null,
+    "fetched_by": "IA (DuckDuckGo free search)"
+  },
+  {
+    "id": "2baffa6f527b",
+    "titulo": "2026 Florida State League (FLOR) Minor League Baseball Standings on ...",
+    "resumo": "Minor League Baseball Minor League Baseball Search LatestNewsFang Strikes out Nine, Mussels Secure Series Win over Marauders Posted on Sunday August 09, 2026 BRADENTON, Fla. - The Fort Myers Mighty Mussels defeated the Bradenton Marauders by a final score of 5-3 on Sunday afternoon at LECOM Park.Fort My... - FSL Fort Myers Mighty Mussels Henschel Shines as Tortugas Capture First Road Series ...",
+    "data": null,
+    "fonte": "DuckDuckGo",
+    "url": "https://www.statscrew.com/minorbaseball/standings/l-FLOR/y-2026",
+    "imagem": "assets/images/2baffa6f527b.png",
+    "thumb": "assets/images/2baffa6f527b_thumb.jpg",
+    "fetched_by": "IA (DuckDuckGo free search)"
+  },
+  {
+    "id": "ab3069d7e0d3",
+    "titulo": "Florida Gators Football - Latest News & Updates",
+    "resumo": "Stay updated with the latestnews, scores, and highlights of Florida Gators Football. Get in-depth analysis and exclusive content on your favorite team.",
+    "data": null,
+    "fonte": "DuckDuckGo",
+    "url": "https://gatorswire.usatoday.com/football/",
+    "imagem": "assets/images/ab3069d7e0d3.png",
+    "thumb": "assets/images/ab3069d7e0d3_thumb.jpg",
+    "fetched_by": "IA (DuckDuckGo free search)"
+  },
+  {
+    "id": "bcfb3d4653e0",
+    "titulo": "Florr.io Community Wiki | Fandom",
+    "resumo": "Florr.io is a basic survival/explorationgamewhere you control a flower on a large map to defeat mobs and obtain petals. The enemies become stronger as you explore, but players obtain better petals from more dangerous mobs.",
+    "data": null,
+    "fonte": "DuckDuckGo",
+    "url": "https://official-florrio.fandom.com/wiki/Florr.io_Community_Wiki",
+    "imagem": null,
+    "thumb": null,
+    "fetched_by": "IA (DuckDuckGo free search)"
+  },
+  {
+    "id": "f2657dfa6aa8",
+    "titulo": "Análises de Games: Reviews de Jogos e Lançamentos | Game On - Terra",
+    "resumo": "Confira as análises dos principais lançamentosdegames para PS4, PS5, Xbox e PC. Veja se vale a pena jogar aquele game.",
+    "data": null,
+    "fonte": "DuckDuckGo",
+    "url": "https://www.terra.com.br/gameon/analises/",
+    "imagem": "assets/images/f2657dfa6aa8.png",
+    "thumb": "assets/images/f2657dfa6aa8_thumb.jpg",
+    "fetched_by": "IA (DuckDuckGo free search)"
+  },
+  {
+    "id": "8d54d602b6c1",
+    "titulo": "Overplay | Plataforma brasileira reúne críticas, avaliações e ...",
+    "resumo": "A proposta é valorizar acríticabrasileira e destacar como determinados títulos são avaliados no contexto local. Foco na localização para o público brasileiro Outro recurso importante da plataforma é o chamado \"FatorBrasil\", que indica se umjogopossui localização em português brasileiro, seja por meiodedublagem ou legendas.",
+    "data": null,
+    "fonte": "DuckDuckGo",
+    "url": "https://www.jwave.com.br/2026/03/overplay-plataforma-brasileira-reune-criticas-avaliacoes-e-biblioteca-pessoal-de-jogos/",
+    "imagem": null,
+    "thumb": null,
+    "fetched_by": "IA (DuckDuckGo free search)"
+  },
+  {
+    "id": "ee5dbd68dfb2",
+    "titulo": "Última Ficha - Reviews, Gameplays, Notícias e mais",
+    "resumo": "Última Ficha oferece um dos maiores acervosdereviews e gameplays doBrasile traz as melhores notíciasdegames com um jornalismo independente.",
+    "data": null,
+    "fonte": "DuckDuckGo",
+    "url": "https://ultimaficha.com.br/",
+    "imagem": null,
+    "thumb": null,
+    "fetched_by": "IA (DuckDuckGo free search)"
+  },
+  {
+    "id": "0a9bee78e663",
+    "titulo": "Nova plataforma brasileira de jogos, Overplay reúne críticas, notas e ...",
+    "resumo": "Foi lançada a Overplay, uma nova plataforma digital voltada para críticos especializados e fãsdevideogames noBrasil. O serviço reúne análisesdeveículos nacionais e internacionais, alémdepermitir que jogadores registrem suas próprias avaliações e organizem suas bibliotecasdejogos.",
+    "data": null,
+    "fonte": "DuckDuckGo",
+    "url": "https://sbtnews.sbt.com.br/noticia/games/nova-plataforma-brasileira-de-jogos-overplay-reune-criticas-notas-e-avaliacoes-de-jogadores",
+    "imagem": "assets/images/0a9bee78e663.webp",
+    "thumb": "assets/images/0a9bee78e663_thumb.jpg",
     "fetched_by": "IA (DuckDuckGo free search)"
   }
 ]

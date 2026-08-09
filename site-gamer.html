@@ -4,6 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>PIXERLWIRE — Plataforma Gamer</title>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<link rel="icon" href="favicon.png" type="image/png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
 <style>
@@ -66,14 +68,73 @@
     z-index:40;
   }
   .sidebar .logo-mark{
-    width:44px; height:44px;
-    border-radius:12px;
+    width:52px; height:52px;
+    border-radius:16px;
     background:linear-gradient(135deg,var(--accent),var(--accent-2));
     display:flex; align-items:center; justify-content:center;
-    font-family:'Rajdhani',sans-serif; font-weight:700; color:#fff; font-size:18px;
     box-shadow:var(--glow);
-    margin-bottom:40px;
+    margin-bottom:32px;
+    transition:transform .2s ease;
   }
+  .sidebar .logo-mark:hover{ transform:scale(1.03); }
+  .logo-img{
+    width:32px;
+    height:32px;
+    object-fit:contain;
+    display:block;
+  }
+  .modal{
+    position:fixed;
+    inset:0;
+    background:rgba(5,7,13,.75);
+    display:none;
+    align-items:center;
+    justify-content:center;
+    z-index:100;
+    padding:20px;
+  }
+  .modal.open{ display:flex; }
+  .modal-panel{
+    width:100%;
+    max-width:420px;
+    background:var(--bg-alt);
+    border:1px solid var(--border);
+    border-radius:24px;
+    padding:28px;
+    box-shadow:var(--shadow);
+    color:var(--text);
+  }
+  .modal-panel h3{ margin-bottom:12px; font-size:24px; }
+  .modal-panel p{ color:var(--text-dim); margin-bottom:18px; line-height:1.6; }
+  .modal-panel label{
+    display:block;
+    margin-bottom:14px;
+    font-size:13px;
+    color:var(--text-dim);
+  }
+  .modal-panel input{
+    width:100%;
+    margin-top:8px;
+    padding:12px 14px;
+    border:1px solid var(--border);
+    border-radius:14px;
+    background:var(--bg);
+    color:var(--text);
+  }
+  .modal-close{
+    position:absolute;
+    right:18px;
+    top:18px;
+    width:28px;
+    height:28px;
+    border:none;
+    border-radius:50%;
+    background:rgba(11,95,255,.12);
+    color:var(--accent);
+    font-size:18px;
+    cursor:pointer;
+  }
+  .modal-help{ margin-top:16px; font-size:12px; color:var(--text-dim); }
   .nav-tabs{
     display:flex; flex-direction:column; gap:6px;
     width:100%;
@@ -315,29 +376,29 @@
 </head>
 <body>
 
-<div class="shell">
+<div class="shell" id="top">
 
   <!-- SIDEBAR -->
   <aside class="sidebar">
-    <div class="logo-mark">P</div>
+    <a class="logo-mark" href="#top" title="PixelWire"><img class="logo-img" src="favicon.png" alt="PixelWire logo"></a>
     <nav class="nav-tabs">
-      <a class="nav-tab active">
+      <a class="nav-tab active" data-target="home" href="#top">
         <svg viewBox="0 0 24 24"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg>
         <span class="nav-label">Início</span>
       </a>
-      <a class="nav-tab">
+      <a class="nav-tab" data-target="games" href="#section-games">
         <svg viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="12" rx="2"/><path d="M7 12h4M17 10v4M15 12h4"/></svg>
         <span class="nav-label">Jogos</span>
       </a>
-      <a class="nav-tab">
+      <a class="nav-tab" data-target="setups" href="#section-setups">
         <svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M4 10h16M10 4v16"/></svg>
         <span class="nav-label">Setups</span>
       </a>
-      <a class="nav-tab">
+      <a class="nav-tab" data-target="news" href="#section-news">
         <svg viewBox="0 0 24 24"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg>
         <span class="nav-label">Reviews</span>
       </a>
-      <a class="nav-tab">
+      <a class="nav-tab" data-target="community" href="#section-community">
         <svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.4"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6M15 14.5c2.6.3 4.5 2.4 4.5 5.5"/></svg>
         <span class="nav-label">Comunidade</span>
       </a>
@@ -360,8 +421,8 @@
       </div>
       <div class="topbar-actions">
         <div class="theme-toggle" id="themeToggle"><div class="knob"></div></div>
-        <a class="btn-ghost">Entrar</a>
-        <a class="btn-pill">Criar conta</a>
+        <a class="btn-ghost" id="loginButton">Entrar</a>
+        <a class="btn-pill" id="signupButton">Criar conta</a>
       </div>
     </header>
 
@@ -370,12 +431,12 @@
       <div class="hero-grid"></div>
       <div class="scanline"></div>
       <div class="hero-inner">
-        <div class="eyebrow"><span class="dot"></span> TEMPORADA 04 · AO VIVO AGORA</div>
-        <h1>Suba de <span class="grad">nível</span><br>em cada partida.</h1>
+        <div class="eyebrow"><span class="dot"></span> COMEÇANDO UMA NOVA JORNADA</div>
+        <h1>Suba de <span class="grad">nível</span><br>com as notícias mais atuais do gaming.</h1>
         <p>Reviews de hardware, setups otimizados e cobertura em tempo real dos maiores lançamentos. Tudo em um só lugar, feito para quem joga sério.</p>
         <div class="hero-actions">
-          <a class="btn-pill">Explorar plataforma</a>
-          <a class="btn-ghost">Ver rankings ↗</a>
+          <a class="btn-pill" id="exploreBtn">Explorar plataforma</a>
+          <a class="btn-ghost" id="rankingsBtn">Ver rankings ↗</a>
         </div>
         <div class="hero-stats">
           <div><div class="stat-num">128k</div><div class="stat-label">Jogadores ativos</div></div>
@@ -386,32 +447,32 @@
     </section>
 
     <!-- JOGOS EM DESTAQUE -->
-    <section class="block">
+    <section class="block" id="section-games">
       <div class="block-head">
         <div>
           <h2>Em destaque essa semana</h2>
           <p>Selecionados pela comunidade com base em desempenho e avaliações reais.</p>
         </div>
-        <a class="see-all">Ver catálogo completo →</a>
+        <a class="see-all" href="#section-games">Ver catálogo completo →</a>
       </div>
       <div class="grid">
         <div class="card">
           <div class="card-thumb"><span class="tag">FPS · 240Hz ready</span></div>
           <h3>Protocolo Zero</h3>
           <p>Tático competitivo com netcode otimizado para partidas ranqueadas de alta precisão.</p>
-          <div class="card-foot"><span class="price">Grátis</span><button class="mini-btn">Detalhes</button></div>
+          <div class="card-foot"><span class="price">Grátis</span><a class="mini-btn" href="#section-games">Detalhes</a></div>
         </div>
         <div class="card">
           <div class="card-thumb"><span class="tag">RPG · Open World</span></div>
           <h3>Crônicas de Aether</h3>
           <p>Mundo aberto com progressão profunda e build customizável de personagem.</p>
-          <div class="card-foot"><span class="price">R$ 149</span><button class="mini-btn">Detalhes</button></div>
+          <div class="card-foot"><span class="price">R$ 149</span><a class="mini-btn" href="#section-games">Detalhes</a></div>
         </div>
         <div class="card">
           <div class="card-thumb"><span class="tag">Corrida · Simulação</span></div>
           <h3>Apex Drift</h3>
           <p>Física realista de pneus e suporte completo a volantes force feedback.</p>
-          <div class="card-foot"><span class="price">R$ 89</span><button class="mini-btn">Detalhes</button></div>
+          <div class="card-foot"><span class="price">R$ 89</span><a class="mini-btn" href="#section-games">Detalhes</a></div>
         </div>
       </div>
     </section>
@@ -427,44 +488,44 @@
     </section>
 
     <!-- SETUPS -->
-    <section class="block">
+    <section class="block" id="section-setups">
       <div class="block-head">
         <div>
           <h2>Setups da comunidade</h2>
           <p>Configurações reais, testadas e avaliadas por outros jogadores.</p>
         </div>
-        <a class="see-all">Ver todos os setups →</a>
+        <a class="see-all" href="#section-setups">Ver todos os setups →</a>
       </div>
       <div class="grid">
         <div class="card">
           <div class="card-thumb"><span class="tag">Build · Competitivo</span></div>
           <h3>Ryzen 7 + RTX 4070</h3>
           <p>Foco em taxa de quadros alta para FPS competitivos, com resfriamento silencioso.</p>
-          <div class="card-foot"><span class="price">★ 4.9</span><button class="mini-btn">Ver build</button></div>
+          <div class="card-foot"><span class="price">★ 4.9</span><a class="mini-btn" href="#section-setups">Ver build</a></div>
         </div>
         <div class="card">
           <div class="card-thumb"><span class="tag">Build · Criador</span></div>
           <h3>i9 + RTX 4080 Super</h3>
           <p>Equilíbrio entre streaming, edição e desempenho máximo em jogos AAA.</p>
-          <div class="card-foot"><span class="price">★ 4.8</span><button class="mini-btn">Ver build</button></div>
+          <div class="card-foot"><span class="price">★ 4.8</span><a class="mini-btn" href="#section-setups">Ver build</a></div>
         </div>
         <div class="card">
           <div class="card-thumb"><span class="tag">Build · Custo-benefício</span></div>
           <h3>Ryzen 5 + RTX 4060</h3>
           <p>Melhor relação preço-desempenho para jogar em 1440p com qualidade alta.</p>
-          <div class="card-foot"><span class="price">★ 4.7</span><button class="mini-btn">Ver build</button></div>
+          <div class="card-foot"><span class="price">★ 4.7</span><a class="mini-btn" href="#section-setups">Ver build</a></div>
         </div>
       </div>
     </section>
 
     <!-- NEWS FEED -->
-    <section class="block">
+    <section class="block" id="section-news">
       <div class="block-head">
         <div>
           <h2>Últimas notícias</h2>
           <p>Conteúdo atualizado automaticamente pelo feed de notícias da plataforma.</p>
         </div>
-        <a class="see-all" id="newsCount">Carregando...</a>
+        <a class="see-all" href="#section-news" id="newsCount">Carregando...</a>
       </div>
       <div class="grid" id="newsGrid">
         <div class="card"><p>Carregando notícias...</p></div>
@@ -472,7 +533,7 @@
     </section>
 
     <!-- CTA / NEWSLETTER -->
-    <section class="block">
+    <section class="block" id="section-community">
       <div class="cta-block">
         <h2>Não perca nenhum lançamento</h2>
         <p>Receba reviews e atualizações de setups direto no seu e-mail, sem spam.</p>
@@ -514,6 +575,24 @@
   </div>
 </div>
 
+<div class="modal" id="authModal" aria-hidden="true">
+  <div class="modal-panel">
+    <button class="modal-close" id="modalClose" aria-label="Fechar">×</button>
+    <h3 id="modalTitle">Entrar</h3>
+    <p id="modalMessage">Use seu login para acessar as novidades e personalizar seu perfil.</p>
+    <form id="authForm">
+      <label>Usuário
+        <input type="text" name="username" placeholder="Seu usuário" autocomplete="username">
+      </label>
+      <label>Senha
+        <input type="password" name="password" placeholder="Senha" autocomplete="current-password">
+      </label>
+      <button type="submit" class="btn-pill">Confirmar</button>
+    </form>
+    <p class="modal-help">Este é um protótipo de login. Os dados não são enviados para nenhum servidor.</p>
+  </div>
+</div>
+
 <script>
   const toggle = document.getElementById('themeToggle');
   const searchInput = document.getElementById('searchInput');
@@ -521,19 +600,78 @@
   const newsCount = document.getElementById('newsCount');
   let noticias = [];
 
+  const authModal = document.getElementById('authModal');
+  const modalTitle = document.getElementById('modalTitle');
+  const modalMessage = document.getElementById('modalMessage');
+  const authForm = document.getElementById('authForm');
+  const modalClose = document.getElementById('modalClose');
+  const loginButton = document.getElementById('loginButton');
+  const signupButton = document.getElementById('signupButton');
+  const exploreBtn = document.getElementById('exploreBtn');
+  const rankingsBtn = document.getElementById('rankingsBtn');
+
   toggle.addEventListener('click', () => {
     document.documentElement.classList.toggle('dark');
   });
 
   document.querySelectorAll('.nav-tab').forEach(tab=>{
-    tab.addEventListener('click', ()=>{
+    tab.addEventListener('click', (event)=>{
+      event.preventDefault();
       document.querySelectorAll('.nav-tab').forEach(t=>t.classList.remove('active'));
       tab.classList.add('active');
+      const target = tab.dataset.target;
+      if (target) {
+        const section = document.getElementById(`section-${target}`) || document.getElementById('top');
+        section && section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
     });
+  });
+
+  loginButton.addEventListener('click', (event) => {
+    event.preventDefault();
+    openModal('Entrar', 'Acesse sua conta PixelWire para salvar favoritos e receber recomendações.');
+  });
+
+  signupButton.addEventListener('click', (event) => {
+    event.preventDefault();
+    openModal('Criar conta', 'Cadastre-se em segundos e comece a acompanhar os lançamentos que importam.');
+  });
+
+  exploreBtn.addEventListener('click', (event) => {
+    event.preventDefault();
+    document.getElementById('section-games').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+
+  rankingsBtn.addEventListener('click', (event) => {
+    event.preventDefault();
+    document.getElementById('section-community').scrollIntoView({ behavior: 'smooth', block: 'start' });
   });
 
   searchInput.addEventListener('input', () => {
     renderNews(searchInput.value.trim());
+  });
+
+  function openModal(title, message) {
+    modalTitle.textContent = title;
+    modalMessage.textContent = message;
+    authModal.classList.add('open');
+    authModal.setAttribute('aria-hidden', 'false');
+  }
+
+  function closeModal() {
+    authModal.classList.remove('open');
+    authModal.setAttribute('aria-hidden', 'true');
+  }
+
+  modalClose.addEventListener('click', closeModal);
+  authModal.addEventListener('click', (event) => {
+    if (event.target === authModal) closeModal();
+  });
+
+  authForm.addEventListener('submit', (event) => {
+    event.preventDefault();
+    closeModal();
+    alert('Login simulado: funcionalidades completas serão ativadas em breve.');
   });
 
   function createNewsCard(item) {
@@ -542,16 +680,17 @@
     const description = item.resumo || item.description || 'Sem descrição disponível.';
     const source = item.fonte || item.source || 'Fonte desconhecida';
     const url = item.url || '#';
+    const when = item.data || item.published || item.fetched_by || 'Fonte verificada';
 
     return `
       <div class="card">
-        <div class="card-thumb" style="background-image:url('${thumb}'); background-size:cover; background-position:center;">
+        <div class="card-thumb" style="background-image:url('${thumb}'); background-size:cover; background-position:center; background-color:rgba(11,95,255,.08);">
           <span class="tag">${source}</span>
         </div>
         <h3>${title}</h3>
         <p>${description}</p>
         <div class="card-foot">
-          <span class="price">${item.data || ''}</span>
+          <span class="price">${when}</span>
           <a class="mini-btn" href="${url}" target="_blank" rel="noopener">Abrir</a>
         </div>
       </div>
@@ -564,7 +703,7 @@
       return text.includes(query.toLowerCase());
     });
 
-    newsCount.textContent = `${filtered.length} notícias`; 
+newsCount.textContent = `${filtered.length} notícias reais`;
 
     if(filtered.length === 0) {
       newsGrid.innerHTML = '<div class="card"><p>Nenhuma notícia encontrada para essa busca.</p></div>';
