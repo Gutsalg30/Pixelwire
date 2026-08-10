@@ -32,14 +32,36 @@ DATA_DIR.mkdir(parents=True, exist_ok=True)
 IMAGES_DIR.mkdir(parents=True, exist_ok=True)
 
 QUERIES = [
-    'video game', 'game release', 'Ubisoft', 'EA', 'Activision', 'Nintendo', 'Sony', 'Microsoft Gaming',
-    'CD Projekt', 'Square Enix', 'Epic Games', 'Fortnite', 'Elden Ring', 'Call of Duty',
-    'IGN Brasil', 'Adrenaline', 'Critical Hits', 'Flor Games', 'IGN Brasil news', 'Crítica de jogos Brasil'
+    'notícias jogos Brasil',
+    'lançamentos de jogos Brasil',
+    'review placa de vídeo Brasil',
+    'promoção hardware gamer Brasil',
+    'notícias de games Brasil',
+    'lançamento de PC gamer Brasil',
+    'adrenaline jogos',
+    'tecmundo jogos',
+    'ign Brasil jogos',
+    'canaltech games',
+    'meups jogos',
+    'eai jogos'
+]
+
+PT_TERMS = [
+    'brasil', 'jogos', 'jogo', 'notícia', 'notícias', 'lançamento', 'promoção',
+    'promoções', 'análise', 'análises', 'hardware', 'placa', 'vídeo', 'pc',
+    'brasileiro', 'brasileira', 'pt-br', 'adrenaline', 'tecmundo', 'ign', 'canaltech', 'eai'
+]
+
+PORTUGUESE_DOMAINS = [
+    'adrenaline.com.br', 'tecmundo.com.br', 'ign.com.br', 'canaltech.com.br',
+    'eai.com.br', 'gameblast.com.br', 'uol.com.br', 'g1.globo.com',
+    'globoesporte.globo.com', 'meups.com.br'
 ]
 
 BING_ENDPOINT = 'https://api.bing.microsoft.com/v7.0/news/search'
 DUCK_ENDPOINT = 'https://html.duckduckgo.com/html/'
 USER_AGENT = 'Mozilla/5.0 (compatible; Pixelwire/1.0; +https://example.com)'
+HEADERS = {'User-Agent': USER_AGENT, 'Accept-Language': 'pt-BR,pt;q=0.9'}
 
 
 def fetch_for_query(q, count=5):
@@ -68,8 +90,7 @@ def extract_duckduckgo_url(href):
 
 def extract_image_from_page(url):
     try:
-        headers = {'User-Agent': USER_AGENT}
-        r = requests.get(url, headers=headers, timeout=15)
+        r = requests.get(url, headers=HEADERS, timeout=15)
         r.raise_for_status()
         soup = BeautifulSoup(r.text, 'html.parser')
         meta = soup.select_one('meta[property="og:image"], meta[name="og:image"], meta[name="twitter:image"], meta[name="twitter:image:src"]')
@@ -131,7 +152,7 @@ def fetch_from_duckduckgo(q, count=5):
 
 def download_image(url, dest):
     try:
-        r = requests.get(url, stream=True, timeout=15)
+        r = requests.get(url, stream=True, headers=HEADERS, timeout=15)
         r.raise_for_status()
         with open(dest, 'wb') as f:
             for chunk in r.iter_content(8192):
@@ -155,7 +176,26 @@ def url_hash(u):
     return hashlib.sha1(u.encode('utf-8')).hexdigest()[:12]
 
 
+def is_portuguese_text(text):
+    if not text:
+        return False
+    text = text.lower()
+    hits = sum(1 for term in PT_TERMS if term in text)
+    return hits >= 2
+
+
+def is_portuguese_item(item):
+    title = item.get('name') or ''
+    desc = item.get('description') or ''
+    url = item.get('url') or item.get('webSearchUrl') or ''
+    if any(domain in url.lower() for domain in PORTUGUESE_DOMAINS):
+        return True
+    return is_portuguese_text(f'{title} {desc}')
+
+
 def normalize_item(item):
+    if not is_portuguese_item(item):
+        return None
     url = item.get('url') or item.get('webSearchUrl') or item.get('image', {}).get('url')
     title = item.get('name')
     desc = item.get('description')
@@ -172,6 +212,8 @@ def normalize_item(item):
         image_url = t.get('contentUrl') if isinstance(t, dict) else None
     if not image_url and url:
         image_url = extract_image_from_page(url)
+    if not image_url:
+        return None
     id_ = url_hash(url or title or desc)
     image_name = None
     thumb_name = None
@@ -182,9 +224,16 @@ def normalize_item(item):
         image_path = IMAGES_DIR / image_name
         if download_image(image_url, image_path):
             thumb_name = f'{id_}_thumb.jpg'
-            make_thumb(image_path, IMAGES_DIR / thumb_name, size=(600,360))
+            if not make_thumb(image_path, IMAGES_DIR / thumb_name, size=(600,360)):
+                return None
         else:
-            image_name = None
+            return None
+    else:
+        return None
+
+    if not thumb_name:
+        return None
+
     return {
         'id': id_,
         'titulo': title,
@@ -213,8 +262,10 @@ def main():
             url = it.get('url') or it.get('webSearchUrl')
             if not url or url in seen:
                 continue
-            seen.add(url)
             norm = normalize_item(it)
+            if not norm:
+                continue
+            seen.add(url)
             out.append(norm)
     out = sorted(out, key=lambda x: x.get('data') or '', reverse=True)
     with open(DATA_DIR / 'news.json', 'w', encoding='utf-8') as f:
