@@ -52,10 +52,36 @@ PT_TERMS = [
     'brasileiro', 'brasileira', 'pt-br', 'adrenaline', 'tecmundo', 'ign', 'canaltech', 'eai'
 ]
 
-PORTUGUESE_DOMAINS = [
+GAMING_TERMS = [
+    'game', 'games', 'videogame', 'video game', 'pc gamer',
+    'playstation', 'ps5', 'xbox', 'nintendo', 'steam', 'valorant', 'fortnite',
+    'league of legends', 'lol', 'fifa', 'gta', 'cyberpunk', 'assassin', 'call of duty',
+    'minecraft', 'e-sports', 'esports', 'monitor', 'teclado', 'mouse',
+    'headset', 'placa de vídeo', 'hardware gamer', 'processador', 'memória',
+    'ray tracing', '4k', '144hz', 'gamer', 'periférico', 'periféricos', 'cpu', 'gpu',
+    'console', 'lançamento de jogos', 'lançamento de game', 'review de jogo',
+    'crítica de jogo', 'gameplay', 'single player', 'multiplayer'
+]
+
+GAMING_DOMAINS = [
     'adrenaline.com.br', 'tecmundo.com.br', 'ign.com.br', 'canaltech.com.br',
-    'eai.com.br', 'gameblast.com.br', 'uol.com.br', 'g1.globo.com',
-    'globoesporte.globo.com', 'meups.com.br'
+    'eai.com.br', 'gameblast.com.br', 'meups.com.br', 'techspot.com.br',
+    'olhardigital.com.br', 'gamerbrasil.com.br', 'playstation.com.br',
+    'portaldogamer.com.br', 'flowgames.gg', 'gpotato.com.br', 'gamehall.com.br',
+    'promohardware.com.br', 'ofertasgamer.com.br', 'terabyteshop.com.br',
+    'gamehunter.com.br', 'adrenaline.com.br'
+]
+
+EXCLUDE_DOMAINS = [
+    'g1.globo.com', 'globo.com', 'gazetaesportiva.com', 'cnnbrasil.com.br',
+    'uol.com.br', 'globoesporte.globo.com', 'r7.com', 'estadao.com.br',
+    'folha.uol.com.br', 'terra.com.br', 'correio24horas.com.br', 'band.uol.com.br'
+]
+
+EXCLUDE_TERMS = [
+    'futebol', 'futebol', 'esporte', 'esportes', 'formula 1', 'f1', 'brasileirão',
+    'vôlei', 'volei', 'basquete', 'tênis', 'tenis', 'corrida', 'motocross', 'skate',
+    'notícias gerais', 'g1', 'globo', 'uol', 'cnn brasil', 'band', 'r7', 'estadão'
 ]
 
 BING_ENDPOINT = 'https://api.bing.microsoft.com/v7.0/news/search'
@@ -184,13 +210,32 @@ def is_portuguese_text(text):
     return hits >= 2
 
 
+def has_gaming_terms(text):
+    if not text:
+        return False
+    text = text.lower()
+    return any(term in text for term in GAMING_TERMS)
+
+
+def has_exclude_terms(text):
+    if not text:
+        return False
+    text = text.lower()
+    return any(term in text for term in EXCLUDE_TERMS)
+
+
 def is_portuguese_item(item):
     title = item.get('name') or ''
     desc = item.get('description') or ''
     url = item.get('url') or item.get('webSearchUrl') or ''
-    if any(domain in url.lower() for domain in PORTUGUESE_DOMAINS):
-        return True
-    return is_portuguese_text(f'{title} {desc}')
+    text = f'{title} {desc} {url}'.lower()
+    if any(domain in url.lower() for domain in EXCLUDE_DOMAINS):
+        return False
+    if has_exclude_terms(text):
+        return False
+    if any(domain in url.lower() for domain in GAMING_DOMAINS):
+        return is_portuguese_text(text) and has_gaming_terms(text)
+    return is_portuguese_text(text) and has_gaming_terms(text)
 
 
 def normalize_item(item):

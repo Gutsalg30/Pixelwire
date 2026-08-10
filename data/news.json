@@ -1,60 +1,5 @@
 [
   {
-    "id": "7252f68b4f0a",
-    "titulo": "ge.globo - É esporte sempre",
-    "resumo": "No ge.globo você encontra a melhor cobertura sobre o Futebol e Outros Esportes, noBrasile no Mundo:Notícias, Vídeos, Tabelas, Agenda e muito mais.",
-    "data": null,
-    "fonte": "DuckDuckGo",
-    "url": "https://ge.globo.com/",
-    "imagem": "assets/images/7252f68b4f0a.png",
-    "thumb": "assets/images/7252f68b4f0a_thumb.jpg",
-    "fetched_by": "IA (DuckDuckGo free search)"
-  },
-  {
-    "id": "f999d3cbfde9",
-    "titulo": "Selecao Brasileira Noticias - Sporting News",
-    "resumo": "Neymar, Itália e Noruega: como Ancelotti justificou eliminação doBrasilna Copa Seleção Brasileira: próximosjogose calendário até o fim de 2026",
-    "data": null,
-    "fonte": "DuckDuckGo",
-    "url": "https://www.sportingnews.com/br/selecao-brasileira/noticias",
-    "imagem": "assets/images/f999d3cbfde9.png",
-    "thumb": "assets/images/f999d3cbfde9_thumb.jpg",
-    "fetched_by": "IA (DuckDuckGo free search)"
-  },
-  {
-    "id": "3bfb2e4bcce8",
-    "titulo": "Seleção Brasileira | Resultados, convocações e jogos do Brasil | ge",
-    "resumo": "Acompanhe asnotíciasda Seleção Brasileira no ge.globo. Últimasnotícias, resultados e próximosjogosdoBrasil. Acesse o ge.",
-    "data": null,
-    "fonte": "DuckDuckGo",
-    "url": "https://ge.globo.com/futebol/selecao-brasileira/",
-    "imagem": "assets/images/3bfb2e4bcce8.png",
-    "thumb": "assets/images/3bfb2e4bcce8_thumb.jpg",
-    "fetched_by": "IA (DuckDuckGo free search)"
-  },
-  {
-    "id": "8d8625343e4c",
-    "titulo": "Gazeta Esportiva - Muito além dos 90 minutos",
-    "resumo": "As últimasnotíciasdos times de futebol, campeonatos nacionais e internacionais,jogosao vivo, basquete, vôlei, fórmula 1, tênis e muitos outros esportes.",
-    "data": null,
-    "fonte": "DuckDuckGo",
-    "url": "https://www.gazetaesportiva.com/",
-    "imagem": "assets/images/8d8625343e4c.webp",
-    "thumb": "assets/images/8d8625343e4c_thumb.jpg",
-    "fetched_by": "IA (DuckDuckGo free search)"
-  },
-  {
-    "id": "8ba9a1eeca94",
-    "titulo": "Notícias de Esportes - Futebol, Fórmula 1, Vôlei e mais | CNN Brasil",
-    "resumo": "Acesse a CNNBrasile acompanhe a cobertura dos principais esportes, calendário dejogos,notíciasdos times, atletas e mais. Visite!",
-    "data": null,
-    "fonte": "DuckDuckGo",
-    "url": "https://www.cnnbrasil.com.br/esportes/",
-    "imagem": "assets/images/8ba9a1eeca94.jpg",
-    "thumb": "assets/images/8ba9a1eeca94_thumb.jpg",
-    "fetched_by": "IA (DuckDuckGo free search)"
-  },
-  {
     "id": "e8d1a9ccc3a5",
     "titulo": "gPotato Brasil | Notícias de Games, Lançamentos e Atualizações",
     "resumo": "Fique por dentro dos games! Veja notícias atualizadas,lançamentos, eventos e atualizações dosjogosmais jogados noBrasile no mundo.",
@@ -63,17 +8,6 @@
     "url": "https://www.gpotato.com.br/",
     "imagem": "assets/images/e8d1a9ccc3a5.png",
     "thumb": "assets/images/e8d1a9ccc3a5_thumb.jpg",
-    "fetched_by": "IA (DuckDuckGo free search)"
-  },
-  {
-    "id": "dd63c53aac64",
-    "titulo": "Notícias sobre Games, Plataformas e eSports - Portal do Gamer",
-    "resumo": "As últimas notícias sobre games e consoles (Playstation, Xbox e Nintendo), esports, campeonatos e muito mais!",
-    "data": null,
-    "fonte": "DuckDuckGo",
-    "url": "https://portaldogamer.com.br/",
-    "imagem": "assets/images/dd63c53aac64.jpg",
-    "thumb": "assets/images/dd63c53aac64_thumb.jpg",
     "fetched_by": "IA (DuckDuckGo free search)"
   },
   {
@@ -88,14 +22,14 @@
     "fetched_by": "IA (DuckDuckGo free search)"
   },
   {
-    "id": "533641b8dea9",
-    "titulo": "Notícias de Games | Flow Games",
-    "resumo": "Confira as notíciasdegames, esports e cultura pop no Flow Games. NovidadesdePlayStation, Xbox, Nintendo, PC, torneios, eventos e mais.",
+    "id": "e59db69de093",
+    "titulo": "Início - Game Notícias",
+    "resumo": "Somos um portal independentedegames, encontre aqui todas as principais notícias do mundo dos games, além é clarodedicas e análises.",
     "data": null,
     "fonte": "DuckDuckGo",
-    "url": "https://flowgames.gg/noticias/",
-    "imagem": "assets/images/533641b8dea9.jpg",
-    "thumb": "assets/images/533641b8dea9_thumb.jpg",
+    "url": "https://gamenoticias.com.br/",
+    "imagem": "assets/images/e59db69de093.jpg",
+    "thumb": "assets/images/e59db69de093_thumb.jpg",
     "fetched_by": "IA (DuckDuckGo free search)"
   },
   {
@@ -110,25 +44,14 @@
     "fetched_by": "IA (DuckDuckGo free search)"
   },
   {
-    "id": "7db0ff857f42",
-    "titulo": "Notícias Placas de vídeo - Oficina da Net",
-    "resumo": "Aqui você verá notícias,reviews, rumores e informações sobre asplacasdevídeo.",
+    "id": "9e55be583f39",
+    "titulo": "Jogos Celular Android e iOS - Mobile Gamer Brasil",
+    "resumo": "NovosJogosARES: THE IRON VANGUARD é lançado noBrasilpara Android, iPhone e PC 7deagostode2026 Por Dario Coutinho",
     "data": null,
     "fonte": "DuckDuckGo",
-    "url": "https://www.oficinadanet.com.br/placa-de-video/noticias",
-    "imagem": "assets/images/7db0ff857f42.jpg",
-    "thumb": "assets/images/7db0ff857f42_thumb.jpg",
-    "fetched_by": "IA (DuckDuckGo free search)"
-  },
-  {
-    "id": "0b0c9cb7b42b",
-    "titulo": "Reviews Placas de vídeo - Oficina da Net",
-    "resumo": "Aqui você verá notícias,reviews, rumores e informações sobre asplacasdevídeo.",
-    "data": null,
-    "fonte": "DuckDuckGo",
-    "url": "https://www.oficinadanet.com.br/placa-de-video/reviews",
-    "imagem": "assets/images/0b0c9cb7b42b.jpg",
-    "thumb": "assets/images/0b0c9cb7b42b_thumb.jpg",
+    "url": "https://www.mobilegamer.com.br/novos-jogos",
+    "imagem": "assets/images/9e55be583f39.png",
+    "thumb": "assets/images/9e55be583f39_thumb.jpg",
     "fetched_by": "IA (DuckDuckGo free search)"
   },
   {
@@ -143,25 +66,14 @@
     "fetched_by": "IA (DuckDuckGo free search)"
   },
   {
-    "id": "a0c56f198dc6",
-    "titulo": "Guia de Placas de Vídeo 2025 - primeiro semestre - Adrenaline",
-    "resumo": "Confira nosso guiadeplacadevídeo2025, onde trazemos as principais informações para você saber qual a melhor GPU para o seu computador!",
+    "id": "bfabdabff410",
+    "titulo": "AMD ou NVIDIA: qual é melhor em 2026? A escolha da placa de vídeo vai ...",
+    "resumo": "Conhecer a melhor escolhadeplacasdevídeoem 2026 exige olhar além dos simples númerosdequadros por segundo e avaliar todo o ecossistema envolvido.",
     "data": null,
     "fonte": "DuckDuckGo",
-    "url": "https://www.adrenaline.com.br/hardware/guia-de-placas-de-video-2025-primeiro-semestre/",
-    "imagem": "assets/images/a0c56f198dc6.jpg",
-    "thumb": "assets/images/a0c56f198dc6_thumb.jpg",
-    "fetched_by": "IA (DuckDuckGo free search)"
-  },
-  {
-    "id": "9751be164625",
-    "titulo": "Top 10 Melhores Placas de Vídeo em 2026 - Top Análises",
-    "resumo": "Em 2025, asplacasdevídeoestão mais potentes, eficientes e otimizadas para ray tracing, 4K e até 8K. Neste ranking atualizado, listamos as 10 melhoresplacasdevídeode2025, com base em testesdebenchmark, custo-benefício, consumo energético e compatibilidade.",
-    "data": null,
-    "fonte": "DuckDuckGo",
-    "url": "https://topanalises.com.br/top-10-melhores-placas-de-video-em-2025/",
-    "imagem": "assets/images/9751be164625.jpg",
-    "thumb": "assets/images/9751be164625_thumb.jpg",
+    "url": "https://olhardigital.com.br/curiosidades/2026/08/05/amd-ou-nvidia-qual-e-melhor-em-2026-a-escolha-da-placa-de-video-vai-muito-alem-do-fps/",
+    "imagem": "assets/images/bfabdabff410.jpg",
+    "thumb": "assets/images/bfabdabff410_thumb.jpg",
     "fetched_by": "IA (DuckDuckGo free search)"
   },
   {
@@ -187,36 +99,36 @@
     "fetched_by": "IA (DuckDuckGo free search)"
   },
   {
-    "id": "6f83719482c5",
-    "titulo": "Games - Novidades e tendências de videogames e eSports - G1",
-    "resumo": "Vejanotíciassobre lançamentosdegamese consoles, as últimas tendênciasdejogos edecomportamento e as competiçõesdeeSports",
+    "id": "15a53209141e",
+    "titulo": "A loja onde o Gamer de Verdade Compra há 20 Anos.",
+    "resumo": "Placa de vídeo, PCGamereHardwarecom 15% off no Pix e frete grátis. Há 20 anos a escolha de quem leva performance a sério. Compre agora e receba rápido.",
     "data": null,
     "fonte": "DuckDuckGo",
-    "url": "https://g1.globo.com/pop-arte/games/",
-    "imagem": "assets/images/6f83719482c5.png",
-    "thumb": "assets/images/6f83719482c5_thumb.jpg",
+    "url": "https://www.terabyteshop.com.br/",
+    "imagem": "assets/images/15a53209141e.png",
+    "thumb": "assets/images/15a53209141e_thumb.jpg",
     "fetched_by": "IA (DuckDuckGo free search)"
   },
   {
-    "id": "a589abbed991",
-    "titulo": "Notícias de Games: PC, Console, Mobile e Web3 | GAMES.GG",
-    "resumo": "Acompanhe as últimasnotícias, atualizaçõesdepatches e lançamentos para Steam, PlayStation, Xbox, Nintendo, mobile e Web3. Cobertura diária completa.",
+    "id": "533641b8dea9",
+    "titulo": "Notícias de Games | Flow Games",
+    "resumo": "Confira asnotíciasdegames, esports e cultura pop no FlowGames. NovidadesdePlayStation, Xbox, Nintendo, PC, torneios, eventos e mais.",
     "data": null,
     "fonte": "DuckDuckGo",
-    "url": "https://games.gg/pt-BR/news/",
-    "imagem": "assets/images/a589abbed991.png",
-    "thumb": "assets/images/a589abbed991_thumb.jpg",
+    "url": "https://flowgames.gg/noticias/",
+    "imagem": "assets/images/533641b8dea9.jpg",
+    "thumb": "assets/images/533641b8dea9_thumb.jpg",
     "fetched_by": "IA (DuckDuckGo free search)"
   },
   {
-    "id": "e5e84aab015f",
-    "titulo": "PC Games - Adrenaline",
-    "resumo": "Acompanhe as principais notícias, análises e artigos sobrePCgames.Lançamentosdetítulos, desenvolvimentodenovos jogos, novidades sobre produtoras e desenvolvedoras e muito mais!",
+    "id": "dd63c53aac64",
+    "titulo": "Notícias sobre Games, Plataformas e eSports - Portal do Gamer",
+    "resumo": "As últimasnotíciassobregamese consoles (Playstation, Xbox e Nintendo), esports, campeonatos e muito mais!",
     "data": null,
     "fonte": "DuckDuckGo",
-    "url": "https://www.adrenaline.com.br/games/pc-games/",
-    "imagem": "assets/images/e5e84aab015f.png",
-    "thumb": "assets/images/e5e84aab015f_thumb.jpg",
+    "url": "https://portaldogamer.com.br/",
+    "imagem": "assets/images/dd63c53aac64.jpg",
+    "thumb": "assets/images/dd63c53aac64_thumb.jpg",
     "fetched_by": "IA (DuckDuckGo free search)"
   },
   {
@@ -231,6 +143,17 @@
     "fetched_by": "IA (DuckDuckGo free search)"
   },
   {
+    "id": "e5e84aab015f",
+    "titulo": "PC Games - Adrenaline",
+    "resumo": "Acompanhe as principais notícias, análises e artigos sobrePCgames.Lançamentosdetítulos, desenvolvimentodenovos jogos, novidades sobre produtoras e desenvolvedoras e muito mais!",
+    "data": null,
+    "fonte": "DuckDuckGo",
+    "url": "https://www.adrenaline.com.br/games/pc-games/",
+    "imagem": "assets/images/e5e84aab015f.png",
+    "thumb": "assets/images/e5e84aab015f_thumb.jpg",
+    "fetched_by": "IA (DuckDuckGo free search)"
+  },
+  {
     "id": "71cadda646e3",
     "titulo": "Calendário de lançamentos PC | GameHunter",
     "resumo": "Compare e Monitore PreçosdeJogos Físicos e Digitais paraPC, PlayStation, Nintendo Switch e Xbox alémdeconsoles, acessórios e hardware.",
@@ -239,17 +162,6 @@
     "url": "https://gamehunter.com.br/calendario-lancamentos/pc",
     "imagem": "assets/images/71cadda646e3.jpg",
     "thumb": "assets/images/71cadda646e3_thumb.jpg",
-    "fetched_by": "IA (DuckDuckGo free search)"
-  },
-  {
-    "id": "a74660437d9a",
-    "titulo": "Notícias - Adrenaline",
-    "resumo": "Das simples atualizações para sistemas operacionais,jogose drivers diversos, até os maiores lançamentos das big techs, você encontra na aba notícias. Cobrimos as principais notícias do dia a dia do mundo da tecnologia, apurando tudo o que você precisa saber para ficar inteirado!",
-    "data": null,
-    "fonte": "DuckDuckGo",
-    "url": "https://www.adrenaline.com.br/noticias/",
-    "imagem": "assets/images/a74660437d9a.png",
-    "thumb": "assets/images/a74660437d9a_thumb.jpg",
     "fetched_by": "IA (DuckDuckGo free search)"
   },
   {
@@ -264,36 +176,25 @@
     "fetched_by": "IA (DuckDuckGo free search)"
   },
   {
-    "id": "762132210178",
-    "titulo": "Jogos de Adrenaline ️ Jogue na CrazyGames",
-    "resumo": "Jogue os MelhoresJogosdeAdrenalineOnline Gratis na CrazyGames, Sem Download ou Instalação Necessária. 🎮 Jogue Veck.io e Muito Mais Agora Mesmo!",
+    "id": "4bc33ae22b68",
+    "titulo": "Games - Adrenaline",
+    "resumo": "Aqui você encontra todas as notícias, artigos, análises e demais publicações sobre games. Acompanhe lançamentos de novosjogose expansões, atualizações de clássicos, curiosidades gerais sobre produtoras e muitas análises dejogosque não passam no seu radar!",
     "data": null,
     "fonte": "DuckDuckGo",
-    "url": "https://www.crazygames.com/br/t/adrenaline",
-    "imagem": "assets/images/762132210178.png",
-    "thumb": "assets/images/762132210178_thumb.jpg",
+    "url": "https://www.adrenaline.com.br/games/",
+    "imagem": "assets/images/4bc33ae22b68.png",
+    "thumb": "assets/images/4bc33ae22b68_thumb.jpg",
     "fetched_by": "IA (DuckDuckGo free search)"
   },
   {
-    "id": "ba58c6e2b2a6",
-    "titulo": "Adrenaline - Facebook",
-    "resumo": "Adrenaline. 274,519 likes · 9,000 talking about this. Fonte de informação sobre hardwares, games e tecnologia. Para notícias, análises exclusivas, opinião",
+    "id": "a19bef91e149",
+    "titulo": "Games - Adrenaline",
+    "resumo": "Milhares de games lançados apara PC e consoles. Ficha técnica, trailer, imagens, análises e encontre as melhores ofertas nas principais lojas de e-commerce.",
     "data": null,
     "fonte": "DuckDuckGo",
-    "url": "https://www.facebook.com/Adrenaline%20/",
-    "imagem": "assets/images/ba58c6e2b2a6.jpg",
-    "thumb": "assets/images/ba58c6e2b2a6_thumb.jpg",
-    "fetched_by": "IA (DuckDuckGo free search)"
-  },
-  {
-    "id": "9cc1677b542e",
-    "titulo": "Adrenaline Brasil - YouTube",
-    "resumo": "Adrenalineis one of the largest and most traditional technology and hardware channels in Brazil and Latin America. Since 2001, we've been a source of information on technology and gaming ...",
-    "data": null,
-    "fonte": "DuckDuckGo",
-    "url": "https://www.youtube.com/@Adrenaline",
-    "imagem": "assets/images/9cc1677b542e.jpg",
-    "thumb": "assets/images/9cc1677b542e_thumb.jpg",
+    "url": "https://www.adrenaline.com.br/tipos-de-produtos/games/",
+    "imagem": "assets/images/a19bef91e149.png",
+    "thumb": "assets/images/a19bef91e149_thumb.jpg",
     "fetched_by": "IA (DuckDuckGo free search)"
   },
   {
@@ -341,17 +242,6 @@
     "fetched_by": "IA (DuckDuckGo free search)"
   },
   {
-    "id": "36e85e2e9492",
-    "titulo": "Últimas notícias - TecMundo",
-    "resumo": "Últimas notícias: as novidades doTecMundovocê confere nesta seção. Não perca nenhuma novidade do mundo da tecnologia e inovação.",
-    "data": null,
-    "fonte": "DuckDuckGo",
-    "url": "https://www.tecmundo.com.br/novidades",
-    "imagem": "assets/images/36e85e2e9492.png",
-    "thumb": "assets/images/36e85e2e9492_thumb.jpg",
-    "fetched_by": "IA (DuckDuckGo free search)"
-  },
-  {
     "id": "3fec9312b143",
     "titulo": "Brasil dos Games",
     "resumo": "IGNBrasilé o maior site de games para Xbox, PS3, PS4, PC, Wii U, Nintendo 3DS, PS Vita, iPhone e Android, com reviews, notícias, previews e vídeos.",
@@ -396,17 +286,6 @@
     "fetched_by": "IA (DuckDuckGo free search)"
   },
   {
-    "id": "049d204a453f",
-    "titulo": "Canaltech - Notícias de Tecnologia, Ciência e Entretenimento",
-    "resumo": "Leia noCanaltechnotícias sobre tecnologia, ciência, entretenimento, quadrinhos, carros, review de celulares, além de dicas e tutoriais.",
-    "data": null,
-    "fonte": "DuckDuckGo",
-    "url": "https://canaltech.com.br/",
-    "imagem": "assets/images/049d204a453f.png",
-    "thumb": "assets/images/049d204a453f_thumb.jpg",
-    "fetched_by": "IA (DuckDuckGo free search)"
-  },
-  {
     "id": "0ba940d6cabb",
     "titulo": "Tudo sobre Games - Canaltech",
     "resumo": "Confira tudo sobregames, consoles (Playstation, Xbox e Nintendo), dicas de jogos, reviews, vídeos e muito mais no site doCanaltech!",
@@ -415,17 +294,6 @@
     "url": "https://canaltech.com.br/games/",
     "imagem": "assets/images/0ba940d6cabb.png",
     "thumb": "assets/images/0ba940d6cabb_thumb.jpg",
-    "fetched_by": "IA (DuckDuckGo free search)"
-  },
-  {
-    "id": "5195a10e7c88",
-    "titulo": "Últimas notícias - Canaltech",
-    "resumo": "Acompanhe as últimas notícias sobre celulares, tecnologia, inovação, lançamentos de cinemas e muito mais aqui no site doCanaltech!",
-    "data": null,
-    "fonte": "DuckDuckGo",
-    "url": "https://canaltech.com.br/ultimas/",
-    "imagem": "assets/images/5195a10e7c88.png",
-    "thumb": "assets/images/5195a10e7c88_thumb.jpg",
     "fetched_by": "IA (DuckDuckGo free search)"
   },
   {
@@ -457,7 +325,7 @@
     "data": null,
     "fonte": "DuckDuckGo",
     "url": "https://www.facebook.com/MeuPlayStationBR/",
-    "imagem": "assets/images/512c5dfffdb8.jpg",
+    "imagem": "assets/images/512c5dfffdb8.ico",
     "thumb": "assets/images/512c5dfffdb8_thumb.jpg",
     "fetched_by": "IA (DuckDuckGo free search)"
   },
@@ -473,25 +341,14 @@
     "fetched_by": "IA (DuckDuckGo free search)"
   },
   {
-    "id": "ded40d477f02",
-    "titulo": "Lançamentos para PlayStation | MeuPlayStation - meups.com.br",
-    "resumo": "Confira quais são os lançamentos mais recentes para os consoles PlayStation (PS5, PS4, PS3 e PS VR2). Tudo organizado e fácil!",
+    "id": "7a503fdbcc08",
+    "titulo": "EAI! Games announces November edition with discussions about career and ...",
+    "resumo": "Ibrawork will host another edition ofEAI!Jogosnext Saturday (29), an event that has established itself as one of the main meeting points for the Brazilian game development community. This edition's program highlights debates on career, professionalization and the relationship between game devs and the press — essential topics for those seeking to position themselves in the industry.",
     "data": null,
     "fonte": "DuckDuckGo",
-    "url": "https://meups.com.br/category/lancamentos/",
-    "imagem": "assets/images/ded40d477f02.png",
-    "thumb": "assets/images/ded40d477f02_thumb.jpg",
-    "fetched_by": "IA (DuckDuckGo free search)"
-  },
-  {
-    "id": "b7483846b7d7",
-    "titulo": "EAI Jogos reúne desenvolvedores e estúdios independentes em São Paulo",
-    "resumo": "A comunidade brasileira de desenvolvimento dejogosindependentes se reúne no próximo dia 25 de julho para mais uma edição doEAIJogos, encontro que reúne desenvolvedores, estudantes, estúdios, artistas e profissionais da indústria em uma programação voltada ao fortalecimento do ecossistema nacional de games.",
-    "data": null,
-    "fonte": "DuckDuckGo",
-    "url": "https://www.osgarotosdeliverpool.com.br/2026/07/eai-jogos-reune-desenvolvedores-e.html",
-    "imagem": "assets/images/b7483846b7d7.jpg",
-    "thumb": "assets/images/b7483846b7d7_thumb.jpg",
+    "url": "https://bnldata.com.br/en/eai-jogos-anuncia-edicao-de-novembro-com-debates-sobre-carreira-e-jornalismo-no-mercado-de-games/",
+    "imagem": "assets/images/7a503fdbcc08.jpg",
+    "thumb": "assets/images/7a503fdbcc08_thumb.jpg",
     "fetched_by": "IA (DuckDuckGo free search)"
   },
   {
